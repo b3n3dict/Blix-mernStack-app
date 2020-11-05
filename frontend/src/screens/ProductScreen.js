@@ -5,13 +5,13 @@ import Rating from '../components/Rating';
 import {listProductDetails} from '../actions/productActions';
 import {useDispatch,useSelector} from 'react-redux'
 const ProductScreen = ({match}) => {
-
+   
        const productDetails = useSelector(state => state.productDetails)
        const {loading,error,product} = productDetails
        const dispatch = useDispatch();
         useEffect(()=>{
               dispatch(listProductDetails(match.params.id))
-          },[match])
+          },[dispatch,match])
     return (
         <>
            <Link className="btn btn-light my-3" to="/" >
