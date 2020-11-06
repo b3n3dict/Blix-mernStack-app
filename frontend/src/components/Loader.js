@@ -1,25 +1,26 @@
-import React from 'react';
-import Backdrop from '@material-ui/core/Backdrop';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { makeStyles } from '@material-ui/core/styles';
+  
+import { CenterFocusStrong } from '@material-ui/icons'
+import React from 'react'
+import { Spinner } from 'react-bootstrap'
 
-const useStyles = makeStyles((theme) => ({
-  backdrop: {
-    zIndex: theme.zIndex.drawer + 1,
-    color: '#ffff'
-  },
-}));
-
-export default function Loader() {
-  const classes = useStyles();
-
-
+const Loader = () => {
   return (
-    <div>
-    
-      <Backdrop className={classes.backdrop} open>
-        <CircularProgress color="inherit" />
-      </Backdrop>
-    </div>
-  );
+    <Spinner
+      animation='border'
+      role='status'
+      variant="primary"
+      style={{
+        width: '100px',
+        height: '100px',
+        padding: '80px',
+        margin: 'auto',
+        marginTop:'80px',
+        display: 'block',
+      }}
+    >
+      <span className='sr-only'>Loading...</span>
+    </Spinner>
+  )
 }
+
+export default Loader
