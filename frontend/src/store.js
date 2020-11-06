@@ -5,11 +5,11 @@ import {
     productListReducer,
     productDetailsReducer
 } from './reducers/productReducers'
-
+import {cartReducer} from './reducers/cartReducers'
 const reducer = combineReducers({
     productList : productListReducer,
-    productDetails: productDetailsReducer
-
+    productDetails: productDetailsReducer,
+    cart: cartReducer
 })
 const intialState = {}
 
