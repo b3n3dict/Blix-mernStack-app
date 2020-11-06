@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <main className="py-2">
+      <main className="py-2 mt-5 pt-5">
         <Container>
           <Switch>
             <Route path="/" component={HomeScreen} exact />
