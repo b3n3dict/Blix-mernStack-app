@@ -3,8 +3,10 @@ import {Link} from 'react-router-dom'
 import { Row,Col,Image,ListGroup,Card,Button, Form } from 'react-bootstrap'
 import Rating from '../components/Rating';
 import {listProductDetails} from '../actions/productActions';
-import Loader from '../components/Loader'
 import {useDispatch,useSelector} from 'react-redux'
+import Loader from '../components/Loader'
+import Message from '../components/Message'
+
 const ProductScreen = ({history,match}) => {
    const [qty,setQty] = useState(0)
        const productDetails = useSelector(state => state.productDetails)
@@ -22,7 +24,7 @@ const ProductScreen = ({history,match}) => {
            <Link className="btn btn-light my-3" to="/" >
            Go Back
            </Link>
-           {loading ? <Loader /> : error ? <h3> {error}</h3> : <Row>
+           {loading ? <Loader /> : error ? <Message severity='error'> {error}</Message> : <Row>
              <Col md={6}>
                <Image src={product.image} alt={product.name} fluid/>
              </Col>
