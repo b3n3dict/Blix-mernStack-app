@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import { Row,Col,Image,ListGroup,Card,Button } from 'react-bootstrap'
 import Rating from '../components/Rating';
 import {listProductDetails} from '../actions/productActions';
+import Spinner from '../components/Spinner'
 import {useDispatch,useSelector} from 'react-redux'
 const ProductScreen = ({match}) => {
    
@@ -17,7 +18,7 @@ const ProductScreen = ({match}) => {
            <Link className="btn btn-light my-3" to="/" >
            Go Back
            </Link>
-           {loading ? <h1>loading...</h1>: error ? <h3> {error}</h3> : <Row>
+           {loading ? <Spinner /> : error ? <h3> {error}</h3> : <Row>
              <Col md={6}>
                <Image src={product.image} alt={product.name} fluid/>
              </Col>
