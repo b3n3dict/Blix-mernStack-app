@@ -4,6 +4,7 @@ import { Button } from "reactstrap";
 import IconButton from "@material-ui/core/IconButton";
 import { makeStyles } from "@material-ui/core/styles";
 
+
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
 
 const useStyles = makeStyles((theme) => ({
@@ -18,8 +19,9 @@ const NotFound = ({ location }) => {
   const classes = useStyles();
   return (
     <Fragment>
-      <h1 className="mt-5 pt-5 text-center">
-        <IconButton className={classes.largeIcon}>
+      <h1 className="mt-5 pt-5 text-center" style={{color:'red'}}>
+      
+        <IconButton className={classes.largeIcon} color="secondary">
           <ErrorOutlineIcon />
         </IconButton>
         Page Not Found
