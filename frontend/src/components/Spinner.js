@@ -12,13 +12,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Spinner() {
   const classes = useStyles();
-  // const [open, setOpen] = React.useState(false);
-  // const handleClose = () => {
-  //   setOpen(false);
-  // };
-  // const handleToggle = () => {
-  //   setOpen(!open);
-  // };
+
 
   return (
     <div>
