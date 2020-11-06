@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/b3n3dict/Krent#readme",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "dotenv": "^8.2.0",
