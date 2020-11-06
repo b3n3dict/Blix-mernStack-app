@@ -2,7 +2,6 @@ import React from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav, Navbar, Container, Form } from "react-bootstrap";
 import logo from "./logo.jpeg";
-import { MDBCol, MDBFormInline, MDBIcon } from "mdbreact";
 
 const Header = () => {
   return (
