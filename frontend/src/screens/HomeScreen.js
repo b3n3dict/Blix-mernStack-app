@@ -4,7 +4,7 @@ import {useDispatch,useSelector} from 'react-redux'
 import Product from '../components/Product'
 import {listProducts} from '../actions/productActions'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Spinner from '../components/Spinner'
+import Loader from '../components/Loader'
 
 const HomeScreen = () => {
     const productList = useSelector(state => state.productList)
@@ -19,7 +19,7 @@ const HomeScreen = () => {
         
         <>
          <h1>Latest Products</h1>
-         {loading ? <Spinner /> :error ? <h3>{error}</h3> : 
+         {loading ? <Loader /> :error ? <h3>{error}</h3> : 
          <Row>
            {products.map((product)=>(
                <Col key={product._id} sm={12} md={6} lg={4} xl={3}>

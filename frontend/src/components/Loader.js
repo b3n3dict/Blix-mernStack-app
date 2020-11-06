@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Spinner() {
+export default function Loader() {
   const classes = useStyles();
 
 
