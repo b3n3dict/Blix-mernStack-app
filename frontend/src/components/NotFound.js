@@ -2,11 +2,9 @@ import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import { Button } from "reactstrap";
 import IconButton from "@material-ui/core/IconButton";
-import { makeStyles } from "@material-ui/core/styles";
+import { createStyles } from "@material-ui/core/styles";
 
-import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = createStyles((theme) => ({
   largeIcon: {
     "& svg": {
       fontSize: 45,
@@ -20,7 +18,7 @@ const NotFound = ({ location }) => {
     <Fragment>
       <h1 className="mt-5 pt-5 text-center">
         <IconButton className={classes.largeIcon}>
-          <ErrorOutlineIcon />
+        <i class="fas fa-exclamation-circle fa-2x text-primary"></i>       
         </IconButton>
         Page Not Found
       </h1>
