@@ -6,7 +6,7 @@ export default function Loader() {
 
   return (
     <div>
-      <Spinner color="primary" style={{ width: '4rem', height: '4rem', marginLeft:'45%', marginTop:'20%'}} />{' '}  
+      <Spinner color="primary" style={{ width: '4rem', height: '4rem', marginLeft:'45%', marginTop:'10%'}} />{' '}  
     </div>
   );
 }
