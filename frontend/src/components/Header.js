@@ -18,24 +18,24 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto ml-3">
-                <div className="row mr-4 ml-1">
-                  <form className="form-inline my-2 my-lg-0">
-                    <input
-                      className="form-control mr-sm-2 bg-light"
-                      type="search"
-                      placeholder="Search Products"
-                      aria-label="Search"
-                      style={{
-                        textDecoration: "none",
-                        borderRadius: "10px",
-                        boxShadow: "none",
-                      }}
-                    />
-                    <button className="btn my-2 my-sm-0" type="submit">
-                      <i className="fas fa-search text-primary"></i>
-                    </button>
-                  </form>
-                </div>
+              <div className="row mr-4 ml-1">
+                <form className="form-inline my-2 my-lg-0">
+                  <input
+                    className="form-control mr-sm-2 bg-light"
+                    type="search"
+                    placeholder="Search Products"
+                    aria-label="Search"
+                    style={{
+                      textDecoration: "none",
+                      borderRadius: "10px",
+                      boxShadow: "none",
+                    }}
+                  />
+                  <button className="btn my-2 my-sm-0" type="submit">
+                    <i className="fas fa-search text-primary"></i>
+                  </button>
+                </form>
+              </div>
 
               <LinkContainer to="/cart">
                 <Nav.Link>
