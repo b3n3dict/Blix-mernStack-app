@@ -6,7 +6,7 @@ import { listProducts } from "../actions/productActions";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Loader from "../components/Loader";
 import Slider from "../components/Slider";
-
+import Message from '../components/Message'
 const HomeScreen = () => {
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
