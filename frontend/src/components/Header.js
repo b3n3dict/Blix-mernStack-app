@@ -1,8 +1,7 @@
 import React from "react";
 import { LinkContainer } from "react-router-bootstrap";
-import { Nav, Navbar, Container, Form } from "react-bootstrap";
+import { Nav, Navbar, Container } from "react-bootstrap";
 import logo from "./logo.jpeg";
-import { MDBCol, MDBFormInline, MDBIcon } from "mdbreact";
 
 const Header = () => {
   return (
@@ -19,11 +18,10 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto ml-3">
-              <Form>
                 <div className="row mr-4 ml-1">
-                  <form class="form-inline my-2 my-lg-0">
+                  <form className="form-inline my-2 my-lg-0">
                     <input
-                      class="form-control mr-sm-2 bg-light"
+                      className="form-control mr-sm-2 bg-light"
                       type="search"
                       placeholder="Search Products"
                       aria-label="Search"
@@ -33,12 +31,11 @@ const Header = () => {
                         boxShadow: "none",
                       }}
                     />
-                    <button class="btn my-2 my-sm-0" type="submit">
-                      <i class="fas fa-search text-primary"></i>
+                    <button className="btn my-2 my-sm-0" type="submit">
+                      <i className="fas fa-search text-primary"></i>
                     </button>
                   </form>
                 </div>
-              </Form>
 
               <LinkContainer to="/cart">
                 <Nav.Link>
