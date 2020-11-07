@@ -17,37 +17,37 @@ const Categories = () => {
         <Row>
           <LinkContainer to="/properties">
             <Col md={2} s={4} className="text-center categoryItems pt-3 pb-3 w-80">
-              <i className="far fa-building fa-2x categoryIcon"></i>{" "}
+            <img src={Properties} alt="Properties-logo" className="categoriesLogo"/>
               <h6 className="mt-3">Properties</h6>
             </Col>
           </LinkContainer>
           <LinkContainer to="/vehicles">
             <Col md={2} s={4} className="text-center categoryItems pt-3 pb-3 w-80">
-              <i className="fas fa-motorcycle fa-2x categoryIcon"></i>{" "}
+            <img src={Vehicles} alt="vehicles-logo" className="categoriesLogo"/>
               <h6 className="mt-3">Vehicles</h6>
             </Col>
           </LinkContainer>
           <LinkContainer to="/furnitures">
             <Col md={2} s={4} className="text-center categoryItems pt-3 pb-3 w-80">
-              <i className="fas fa-couch fa-2x categoryIcon "></i>
+            <img src={Furnitures} alt="furnitures-logo" className="categoriesLogo"/>
               <h6 className="mt-3">Furnitures</h6>
             </Col>
           </LinkContainer>
           <LinkContainer to="/appliances">
             <Col md={2} s={4} className="text-center categoryItems pt-3 pb-3 w-80">
-              <i className="fas fa-blender-phone fa-2x categoryIcon"></i>
+            <img src={Applicences} alt="appliences-logo" className="categoriesLogo"/>
               <h6 className="mt-3"> Appliances</h6>
             </Col>
           </LinkContainer>
           <LinkContainer to="/electronics">
             <Col md={2} s={4} className="text-center categoryItems pt-3 pb-3 w-80">
-              <i className="fas fa-mobile fa-2x categoryIcon"></i>
+            <img src={Electronics} alt="electronics-logo" className="categoriesLogo"/>
               <h6 className="mt-3">Electronics</h6>
             </Col>
           </LinkContainer>
           <LinkContainer to="/sports">
             <Col md={2} s={4} className="text-center categoryItems pt-3 pb-3 w-80">
-              <i className="fas fa-dumbbell fa-2x categoryIcon"></i>{" "}
+            <img src={Sports} alt="sports-logo" className="categoriesLogo"/>
               <h6 className="mt-3">Sports</h6>
             </Col>
           </LinkContainer>
