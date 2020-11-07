@@ -1,7 +1,7 @@
 import React from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav, Navbar, Container, Form } from "react-bootstrap";
-import logo from "./logo.jpeg";
+import logo from '../img/logo.jpeg'
 
 const Header = () => {
   return (
