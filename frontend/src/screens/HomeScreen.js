@@ -6,6 +6,7 @@ import { listProducts } from "../actions/productActions";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Spinner from "../components/Spinner";
 import Slider from "../components/Slider";
+import Categories from "../components/Categories/Categories";
 
 const HomeScreen = () => {
   const productList = useSelector((state) => state.productList);
@@ -19,6 +20,7 @@ const HomeScreen = () => {
   return (
     <>
       <Slider />
+      <Categories />
       <h1 className="mt-5">Latest Products</h1>
       {loading ? (
         <Spinner />

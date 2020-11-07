@@ -1,0 +1,17 @@
+.categoryItems{
+    /* box-shadow: rgba(0, 0, 0, 0.09) 1.95px 1.95px 1.6px; */
+    border-radius: 12px;
+    width: 30px;
+
+}
+
+.categoryItems:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.categoryIcon{
+    color: rgba(18, 18, 240, 0.801);
+}
+.categoryItems h6{
+    font-weight: 300;
+    font-size: smaller;
+}
