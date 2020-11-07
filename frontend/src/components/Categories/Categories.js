@@ -6,7 +6,7 @@ import { LinkContainer } from "react-router-bootstrap";
 const Categories = () => {
   return (
     <div>
-      <Container className="container mt-5">
+      <Container className="container mt-5 mb-5">
         <div className="row">
           <LinkContainer to="/properties">
             <div className="col-md-2 col-4 text-center categoryItems pt-3 pb-3 w-80">

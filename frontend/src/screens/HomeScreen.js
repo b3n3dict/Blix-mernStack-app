@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Loader from "../components/Loader";
 import Slider from "../components/Slider";
 import Message from '../components/Message'
+import Categories from '../components/Categories/Categories'
 const HomeScreen = () => {
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
@@ -20,6 +21,7 @@ const HomeScreen = () => {
         
         <>
         <Slider />
+        <Categories />
          <h1>Latest Products</h1>
          {loading ? <Loader /> :error ? <Message severity='error'>{error}</Message> : 
          <Row>
