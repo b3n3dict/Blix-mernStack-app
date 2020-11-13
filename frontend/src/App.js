@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import HomeScreen from './screens/HomeScreen'
 import ProductScreen from './screens/ProductScreen'
 import CartScreen from './screens/CartScreen'
+import LoginScreen from './screens/LoginScreen'
 import NotFound from './components/NotFound'
 
 const App=()=> {
@@ -18,6 +19,7 @@ const App=()=> {
      <Route path="/" component={HomeScreen} exact/> 
      <Route path="/product/:id" component={ProductScreen} /> 
      <Route path="/cart/:id?" component={CartScreen} />
+     <Route path="/login" component={LoginScreen}/>
      <Route component={NotFound} />
      </Switch>
      </Container>

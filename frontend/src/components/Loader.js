@@ -5,6 +5,7 @@ import { Spinner } from 'react-bootstrap'
 const Loader = () => {
   return (
     <Spinner
+    
       animation='border'
       role='status'
       variant="primary"
@@ -13,9 +14,9 @@ const Loader = () => {
         height: '100px',
         padding: '80px',
         margin: 'auto',
-        marginTop:'80px',
         display: 'block',
       }}
+      className="d-flex align-items-center"
     >
       <span className='sr-only'>Loading...</span>
     </Spinner>
