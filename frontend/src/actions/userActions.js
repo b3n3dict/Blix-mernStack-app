@@ -37,7 +37,7 @@ import
             }
  }
 
- export const logout =() => (dispatch)=>{
+ export const logout = () => (dispatch)=>{
  
      localStorage.removeItem('userInfo')
      dispatch({
