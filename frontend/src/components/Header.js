@@ -5,8 +5,9 @@ import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import logo from '../img/logo.jpeg'
 import {logout} from '../actions/userActions'
 const Header = () => {
-  const dispatch = useDispatch()
- const userLogin = useSelector(state=> state.userLogin)
+  const dispatch = useDispatch() 
+  
+ const userLogin = useSelector((state)=> state.userLogin)
   const {userInfo} = userLogin
 
   const logoutHandler=()=>{
@@ -25,6 +26,7 @@ const Header = () => {
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
+          
             <Nav className="ml-auto ml-3">
               <div className="row mr-4 ml-1">
                 <form className="form-inline my-2 my-lg-0">

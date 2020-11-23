@@ -1,13 +1,11 @@
 import React,{useState,useEffect} from 'react'
 import {useDispatch,useSelector} from 'react-redux'
-import {Link} from 'react-router-dom'
 import {Row,Col,Form,Button} from 'react-bootstrap'
-import FormContainer from '../components/FormContainer'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
-import {register} from '../actions/userActions'
+import {getUserDetails} from '../actions/userActions'
 
-const RegisterScreen = ({history,location}) => {
+const ProfileScreen = ({history,location}) => {
     const [name,setName] = useState('') 
     const [email,setEmail] = useState('') 
     const [password,setPassword] = useState('')
@@ -15,29 +13,38 @@ const RegisterScreen = ({history,location}) => {
     const [message,setMessage] = useState(null)
  
     const dispatch = useDispatch()
-    const userRegister = useSelector(state => state.userRegister)
-    
-    const {loading,error,userInfo} = userRegister
+    const userDetails = useSelector(state => state.userDetails)
+    const {loading,error,user} = userDetails
+
+    const userLogin = useSelector(state => state.userLogin)
+    const {userInfo} = userLogin
    
-    const redirect = location.search ? location.search.split('=')[1] : '/'
+
      useEffect(()=>{
-      if(userInfo){
-          history.push(redirect)
+      if(!userInfo){
+          history.push('/login')
+      }else{
+        if(!user.name){
+           dispatch(getUserDetails('profile'))
+        }else{
+            setName(user.name)
+            setEmail(user.email)
+        }
       }
-    },[history,userInfo,redirect])
+    },[dispatch,history,userInfo,user])
     const submitHandler =(e)=>{
         e.preventDefault()
         if(password !== confirmPassword){
              setMessage('Passwords Not Match')
         }else{
-            dispatch(register(name,email,password))
+            // Dispatch update profile
             
         }
         
     }
-    return (
-        <FormContainer>
-            <h1>Sign Up</h1>
+    return <Row>
+        <Col md={3}>
+        <h2>User Profile</h2>
             {message && <Message severity="error">{message}</Message>}
             {error && <Message severity="error">{error}</Message>}
             {loading ? <Loader/> : <Form onSubmit={submitHandler}>
@@ -65,16 +72,13 @@ const RegisterScreen = ({history,location}) => {
                     onChange={(e)=> setConfirmPassword(e.target.value)}>
                     </Form.Control>
                 </Form.Group>
-                <Button type='submit' varient='primary'>Register</Button>
+                <Button type='submit' varient='primary'>Update</Button>
             </Form> }
-            
-            <Row className="py-3">
-                <Col>
-                    Have and Account? <Link to={ redirect ? `/login?redirect=${redirect}` : '/login'}>Login</Link>
-                </Col>
-            </Row>
-        </FormContainer>
-    )
+        </Col>
+        <Col md={9}>
+          <h2>ORDERS</h2>
+        </Col>
+    </Row>
 }
 
-export default RegisterScreen
+export default ProfileScreen
