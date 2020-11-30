@@ -1,4 +1,4 @@
-import { strict } from 'assert';
+
 import mongoose from 'mongoose'
 
 const orderSchema = mongoose.Schema({
