@@ -17,16 +17,14 @@ const orderSchema = mongoose.Schema({
                 type:mongoose.Schema.Types.ObjectId,
                 required:true,
                 ref: 'Product'
-            }
-           
-
-        }
+            },
+        },
     ],
     shippingAddress:{
             address:{type:String,required:true},
             city:{type:String,required:true},
-            postalCode:{type:String,required:true},
-            country:{type:String,required:true},
+           pincode:{type:String,required:true},
+            state:{type:String,required:true},
            
     },
     paymentMethod: {
@@ -39,7 +37,7 @@ const orderSchema = mongoose.Schema({
        update_time:{type:String},
        email_address:{type:String},
     },
-    taxPrice: {
+    itemsPrice: {
         type:Number,
         required:true,
         default:0.0,

@@ -20,7 +20,7 @@ app.get('/',(req,res)=>{
 // routes
 app.use('/api/products',productRoutes)
 app.use('/api/users',userRoutes)
-app.use('./api/orders',orderRoutes)
+app.use('/api/orders',orderRoutes)
 
 // error handler for 404
 app.use(notFound)
