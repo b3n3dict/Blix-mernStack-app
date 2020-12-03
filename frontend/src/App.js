@@ -14,6 +14,7 @@ import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
+import Electronics from './components/Categories/Electronics'
 const App=()=> {
   return (
     <Router>
@@ -22,6 +23,7 @@ const App=()=> {
      <Container>
       <Switch>
      <Route path="/" component={HomeScreen} exact/> 
+     <Route path="/electronics" component={Electronics}/> 
      <Route path="/product/:id" component={ProductScreen} /> 
      <Route path="/cart/:id?" component={CartScreen} />
      <Route path="/login" component={LoginScreen}/>
