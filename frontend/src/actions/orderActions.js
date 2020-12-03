@@ -38,12 +38,12 @@ export const getOrderDetails = (id)=> async (dispatch,getState)=>{
          dispatch({
              type:ORDER_DETAILS_REQUEST
          })
-       const {userLogin:{userInfo}} = getState()
+         const {userLogin:{userInfo}} = getState()
        const config = {
-           headers:{
-               Authorization : `Bearer ${userInfo.token}`
-           }
-       }
+        headers:{
+            Authorization : `Bearer ${userInfo.token}`
+        }
+    }
        const {data}= await axios.get(`/api/orders/${id}`,config)
        dispatch({
            type:ORDER_DETAILS_SUCCESS,

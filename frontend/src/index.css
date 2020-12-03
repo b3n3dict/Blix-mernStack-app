@@ -18,3 +18,7 @@ h2{
     margin: 0.2rem;
     font-size: small;
 }
+
+a{
+    text-decoration: none;
+}
