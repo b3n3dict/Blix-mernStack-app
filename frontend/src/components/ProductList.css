@@ -1,0 +1,21 @@
+.productList__body {
+  display: flex !important;
+  flex-direction: row;
+  overflow-y: scroll !important;
+  flex-wrap: wrap !important;
+}
+.productList__body::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.productList__body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.productList__products {
+  display: flex;
+}
+.productList__header {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}

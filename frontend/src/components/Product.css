@@ -1,0 +1,30 @@
+.product {
+  max-width: 250px;
+  width: 230px;
+  margin: 10px;
+  display: flex;
+  transition: transform 300ms ease-in;
+  border: none !important;
+}
+.product:hover {
+  transform: scale(1.04);
+}
+.product__title {
+  font-size: 15px;
+  font-family: "Ubuntu", sans-serif;
+}
+.product__price {
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  /* For mobile phones: */
+  .product {
+    max-width: 200px;
+    margin: 3px;
+
+    width: 200px;
+  }
+  .product__price {
+    font-size: 18px;
+  }
+}
