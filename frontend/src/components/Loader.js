@@ -13,6 +13,8 @@ const Loader = () => {
         padding: "30px",
         margin: "auto",
         display: "block",
+        alignItems: "center",
+        justifyContent: "center",
       }}
       className="d-flex align-items-center"
     >

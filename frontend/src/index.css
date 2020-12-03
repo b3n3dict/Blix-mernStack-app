@@ -1,24 +1,26 @@
-
 main {
-    min-height: 80vh;
+  min-height: 80vh;
 }
 
-h3{
-    padding: 1rem 0;
+h3 {
+  padding: 1rem 0;
 }
-h1{
-    font-size: 1.8rem;
-    padding: 1rem 0;
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
 }
-h2{
-    font-size: 1.4rem;
-    padding: 0.5rem 0;
+h2 {
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
 }
-.rating .txt{
-    margin: 0.2rem;
-    font-size: small;
+.rating .txt {
+  margin: 0.2rem;
+  font-size: small;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
+}
+link {
+  text-decoration: none;
 }
