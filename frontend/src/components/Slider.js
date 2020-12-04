@@ -3,6 +3,7 @@ import { UncontrolledCarousel } from "reactstrap";
 import Slide1 from "./SlideImages/slide1.png";
 import Slide2 from "./SlideImages/slide5.png";
 import Slide3 from "./SlideImages/slide4.jpg";
+import "./Slider.css";
 
 const items = [
   {
@@ -20,6 +21,6 @@ const items = [
   },
 ];
 
-const Slider = () => <UncontrolledCarousel items={items} />;
+const Slider = () => <UncontrolledCarousel className="slider" items={items} />;
 
 export default Slider;

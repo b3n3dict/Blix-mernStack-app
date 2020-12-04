@@ -28,3 +28,8 @@
     font-size: 18px;
   }
 }
+.product__image {
+  object-fit: contain;
+  padding: 2px;
+  border-radius: 15px !important;
+}

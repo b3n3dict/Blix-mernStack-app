@@ -20,7 +20,7 @@ const HomeScreen = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <div className="container-fluid">
       <Slider />
       <Categories />
       <ProductList title="Latest Products" />
@@ -41,7 +41,7 @@ const HomeScreen = () => {
           ))}
         </Row>
       )} */}
-    </>
+    </div>
   );
 };
 

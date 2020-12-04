@@ -16,69 +16,76 @@ const Header = () => {
   };
   return (
     <header className="header">
-      <Navbar className="fixed-top" bg="light" expand="lg" collapseOnSelect>
-        <Container>
-          <LinkContainer to="/">
-            <Navbar bg="light" className="header__logo">
-              <Navbar.Brand href="/">
-                <img src={logo} width="150px" alt="" />
-              </Navbar.Brand>
-            </Navbar>
-          </LinkContainer>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto ml-3">
-              <div className="row mr-4 ml-1">
-                <form className="form-inline my-2 my-lg-0">
-                  <input
-                    className="form-control mr-sm-2 bg-light header__input"
-                    type="search"
-                    placeholder="Search Products"
-                    aria-label="Search"
-                    style={{
-                      textDecoration: "none",
-                      borderRadius: "10px",
-                      boxShadow: "none",
-                      display: "flex",
-                      flex: 1,
-                    }}
-                  />
-                  <button
-                    onSubmit={(e) => {
-                      e.preventDefault();
-                    }}
-                    className="btn my-2 my-sm-0"
-                    type="submit"
-                  >
-                    <i className="fas fa-search text-primary"></i>
-                  </button>
-                </form>
-              </div>
+      <Navbar
+        className="fixed-top header__nav"
+        bg="light"
+        expand="lg"
+        collapseOnSelect
+      >
+        <LinkContainer to="/">
+          <Navbar bg="light" className="header__logo ml-1">
+            <Navbar.Brand href="/">
+              <img src={logo} width="150px" alt="" />
+            </Navbar.Brand>
+          </Navbar>
+        </LinkContainer>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto ml-3">
+            <div className="row mr-4 ml-1">
+              <form className="form-inline my-2 my-lg-0">
+                <input
+                  className="form-control mr-sm-2 bg-light header__input"
+                  type="search"
+                  placeholder="Search Products"
+                  aria-label="Search"
+                  style={{
+                    textDecoration: "none",
+                    borderRadius: "10px",
+                    boxShadow: "none",
+                    display: "flex",
+                    flex: 1,
+                  }}
+                />
+                <button
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                  }}
+                  className="btn my-2 my-sm-0"
+                  type="submit"
+                >
+                  <i className="fas fa-search text-primary"></i>
+                </button>
+              </form>
+            </div>
 
-              <LinkContainer to="/cart">
+            <LinkContainer to="/cart">
+              <Nav.Link>
+                <i className="fas fa-shopping-cart"></i> CART
+              </Nav.Link>
+            </LinkContainer>
+            {userInfo ? (
+              <NavDropdown
+                className="mr-5"
+                title={userInfo.name.toUpperCase()}
+                id="username"
+              >
+                <LinkContainer to="/profile">
+                  <NavDropdown.Item>Profile</NavDropdown.Item>
+                </LinkContainer>
+                <NavDropdown.Item onClick={logoutHandler}>
+                  Logout
+                </NavDropdown.Item>
+              </NavDropdown>
+            ) : (
+              <LinkContainer to="/login">
                 <Nav.Link>
-                  <i className="fas fa-shopping-cart"></i> CART
+                  <i className="fas fa-user"></i> SIGN IN
                 </Nav.Link>
               </LinkContainer>
-              {userInfo ? (
-                <NavDropdown title={userInfo.name.toUpperCase()} id="username">
-                  <LinkContainer to="/profile">
-                    <NavDropdown.Item>Profile</NavDropdown.Item>
-                  </LinkContainer>
-                  <NavDropdown.Item onClick={logoutHandler}>
-                    Logout
-                  </NavDropdown.Item>
-                </NavDropdown>
-              ) : (
-                <LinkContainer to="/login">
-                  <Nav.Link>
-                    <i className="fas fa-user"></i> SIGN IN
-                  </Nav.Link>
-                </LinkContainer>
-              )}
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
+            )}
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     </header>
   );
