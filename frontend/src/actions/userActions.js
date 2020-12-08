@@ -109,7 +109,7 @@ import { ORDER_LIST_MY_RESET } from '../constants/orderConstants'
         const {userLogin:{userInfo}} = getState()
         const config = {
             headers:{
-                'Content-Type': 'application/json',
+
                 Authorization : `Bearer ${userInfo.token}`
             }
         }
