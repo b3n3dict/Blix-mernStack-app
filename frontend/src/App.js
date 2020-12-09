@@ -16,6 +16,7 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
 import Electronics from './components/Categories/Electronics'
 import UserListScreen from './screens/UserListScreen';
+import UserEditScreen from './screens/UserEditScreen'
 const App=()=> {
   return (
     <Router>
@@ -25,6 +26,7 @@ const App=()=> {
       <Switch>
      <Route path="/" component={HomeScreen} exact/> 
      <Route path="/admin/userlist" component={UserListScreen}/>
+     <Route path="/admin/user/:id/edit" component={UserEditScreen}/>
      <Route path="/electronics" component={Electronics}/> 
      <Route path="/product/:id" component={ProductScreen} /> 
      <Route path="/cart/:id?" component={CartScreen} />
