@@ -1,7 +1,8 @@
 import React from "react";
 import {useDispatch,useSelector} from 'react-redux'
 import { LinkContainer } from "react-router-bootstrap";
-import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
+import { Nav, Navbar, Container, NavDropdown} from "react-bootstrap";
+import { Badge } from '@material-ui/core';
 import logo from '../img/logo.jpeg'
 import {logout} from '../actions/userActions'
 import {USER_DETAILS_RESET} from '../constants/userConstants'
@@ -11,7 +12,8 @@ const Header = () => {
   
  const userLogin = useSelector((state)=> state.userLogin)
   const {userInfo} = userLogin
-
+ const cart = useSelector((state)=> state.cart) 
+ const {cartItems}  = cart;
   const logoutHandler=()=>{
     dispatch(logout())
     dispatch({type:ORDER_LIST_MY_RESET})
@@ -66,7 +68,11 @@ const Header = () => {
 
               <LinkContainer to="/cart">
                 <Nav.Link>
-                  <i className="fas fa-shopping-cart"></i> CART
+                CART {''}
+                <Badge badgeContent={cartItems.length} color="primary">
+                <i className="fas fa-shopping-cart"></i>
+                      </Badge>
+                   
                 </Nav.Link>
               </LinkContainer>
               {userInfo ? (
