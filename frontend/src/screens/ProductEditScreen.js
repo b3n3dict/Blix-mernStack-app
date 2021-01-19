@@ -6,7 +6,9 @@ import FormContainer from '../components/FormContainer'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
 import {listProductDetails, } from '../actions/productActions'
-
+import {updateProduct} from '../actions/productActions'
+import { PRODUCT_UPDATE_RESET } from '../constants/productConstants'
+import axios from 'axios'
 const ProductEditScreen = ({history,match}) => {
 
     const productId = match.params.id 
@@ -18,31 +20,72 @@ const ProductEditScreen = ({history,match}) => {
     const [category,setCategory] = useState('')
     const [countInStock,setCountInStock] = useState(0)
     const [description,setDescription] = useState('')
+    const [uploading,setUploading] = useState(false)
 
 
     const dispatch = useDispatch()
     const productDetails = useSelector(state => state.productDetails)
     const {loading,error,product} = productDetails
+
+    const productUpdate = useSelector(state => state.productUpdate)
+    const {loading:loadingUpdate,error:errorUpdate,success:successUpdate} = productUpdate
    
   
      useEffect(()=>{
-
-        if(!product.name || product._id !== productId){
-          dispatch(listProductDetails(productId))
-   }else{
-       setName(product.name)
-       setPrice(product.price)
-       setImage(product.image) 
-       setBrand(product.brand)
-       setCategory(product.category)
-       setCountInStock(product.countInStock)
-       setDescription(product.description)
-
-   }
+         if(successUpdate){
+           dispatch({type:PRODUCT_UPDATE_RESET})
+           history.push('/admin/productlist')
+         }else{
+          if(!product.name || product._id !== productId){
+            dispatch(listProductDetails(productId))
+     }else{
+         setName(product.name)
+         setPrice(product.price)
+         setImage(product.image) 
+         setBrand(product.brand)
+         setCategory(product.category)
+         setCountInStock(product.countInStock)
+         setDescription(product.description)
+  
+     }
+         }
        
-    },[dispatch,product,productId,history])
+       
+    },[dispatch,product,productId,history,successUpdate])
     const submitHandler =(e)=>{
-        e.preventDefault()
+          e.preventDefault()
+          dispatch(updateProduct({
+            _id:productId,
+            name,
+            price,
+            image,
+            brand,
+            category,
+            countInStock,
+            description
+          }))
+    }
+
+    const uploadFileHandler = async (e)=>{
+      const file = e.target.files[0]
+      const formData = new FormData()
+      formData.append('image',file)
+      setUploading(true)
+      try {
+         const config = {
+           headers : {
+             "Content-Type": "multipart/form-data"
+           },
+         }
+         const {data} = await axios.post('/api/upload' , formData,config)
+         setImage(data)
+         setUploading(false)
+      } catch (e) {
+        console.log(e)
+         setUploading(false)
+      }
+ 
+      
     }
     return (
 <>
@@ -51,6 +94,8 @@ const ProductEditScreen = ({history,match}) => {
       </Link>
       <FormContainer>
         <h1>Edit Product</h1>
+        {loadingUpdate && <Loader/> }
+        {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
         {loading ? (
           <Loader />
         ) : error ? (
@@ -76,7 +121,7 @@ const ProductEditScreen = ({history,match}) => {
                 onChange={(e) => setPrice(e.target.value)}
               ></Form.Control>
             </Form.Group>
-
+      
             <Form.Group controlId='image'>
               <Form.Control
                 type='text'
@@ -84,6 +129,10 @@ const ProductEditScreen = ({history,match}) => {
                 value={image}
                 onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
+              {uploading && <Loader/>}
+              <Form.File id="image-file" label="Choose Image" custom onChange={uploadFileHandler}>
+                
+              </Form.File>
             </Form.Group>
 
             <Form.Group controlId='brand'>
