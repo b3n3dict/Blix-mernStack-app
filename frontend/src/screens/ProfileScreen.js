@@ -137,7 +137,7 @@ const ProfileScreen = ({ history, location }) => {
                   </td>
                   <td>
                     {order.isDelevered ? (
-                      order.deleveredAt.subString(0, 10)
+                      order.deleveredAt.substring(0, 10)
                     ) : (
                       <i className="fas fa-times" style={{ color: "red" }}></i>
                     )}

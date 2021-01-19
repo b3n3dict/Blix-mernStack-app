@@ -30,6 +30,85 @@ h2 {
 a {
   text-decoration: none;
 }
-link {
-  text-decoration: none;
+
+@import url("https://fonts.googleapis.com/css?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Hind&display=swap");
+
+:root {
+  --border-radius: 10px;
+}
+
+.CardInner {
+  /* padding: 10px 10px; */
+  /* background-color: #e2e9f4; */
+  border-radius: var(--border-radius);
+}
+
+.Icontainer {
+  display: flex;
+}
+
+.Icon {
+  display: inline;
+  min-width: 46px;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  margin-left: 12px;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6), 2px 2px 12px #c8d8e7;
+}
+.Icon svg {
+  transform: translate(-1px, -1px);
+}
+
+.InputContainer {
+  width: 100%;
+}
+
+input {
+  background-color: #e3edf7;
+  padding: 13px 20px;
+  border: none;
+  display: block;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  color: #a9b8c9;
+  -webkit-appearance: none;
+  transition: all 240ms ease-out;
+  width: 100%;
+}
+input::placeholder {
+  color: #6d7f8f;
+}
+input:focus {
+  outline: none;
+  color: #6d7f8f;
+  background-color: #eff5fa;
+}
+
+.InputContainer {
+  --top-shadow: inset 1px 1px 3px #c5d4e3, inset 2px 2px 6px #c5d4e3;
+  --bottom-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.7);
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.InputContainer:before,
+.InputContainer:after {
+  left: 0;
+  top: 0;
+  display: block;
+  content: "";
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.InputContainer:before {
+  box-shadow: var(--bottom-shadow);
+}
+.InputContainer:after {
+  box-shadow: var(--top-shadow);
 }
