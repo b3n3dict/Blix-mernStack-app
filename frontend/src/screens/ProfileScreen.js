@@ -50,7 +50,7 @@ const ProfileScreen = ({ history, location }) => {
     }
   };
   return (
-    <Row>
+    <Row className="mt-4">
       <Col md={3}>
         <h2>User Profile</h2>
         {message && <Message severity="error">{message}</Message>}
