@@ -10,6 +10,7 @@ import {
   Button,
   Card,
 } from "react-bootstrap";
+// import { NeuButton } from 'neumorphic-ui';
 import Message from "../components/Message";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 
@@ -78,6 +79,7 @@ const CartScreen = ({ match, location, history }) => {
                   </Col>
                   <Col md={2}>
                     <Button
+                    className="btn-icon"
                       type="button"
                       varient="light"
                       onClick={() => {
@@ -106,15 +108,15 @@ const CartScreen = ({ match, location, history }) => {
                 .reduce((acc, item) => acc + item.qty * item.price, 0)
                 .toFixed(2)}
             </ListGroup.Item>
-            <ListGroup.Item>
-              <Button
+            <ListGroup.Item style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+              <button
                 type="button"
-                className="btn-block"
+                className="neuButton"
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
                 Checkout
-              </Button>
+              </button>
             </ListGroup.Item>
           </ListGroup>
         </Card>

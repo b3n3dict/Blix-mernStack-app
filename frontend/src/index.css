@@ -59,15 +59,21 @@ a {
   margin-left: 12px;
   box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6), 2px 2px 12px #c8d8e7;
 }
+
 .Icon svg {
   transform: translate(-1px, -1px);
+} 
+.Icon:hover {
+  /* background-color: aqua; */
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.6), 5px 5px 10px #c8d8e7,
+  inset -10px -10px 15px rgba(255, 255, 255, 0.6), inset  10px 10px 15px #c8d8e7 ;
 }
 
 .InputContainer {
   width: 100%;
 }
 
-input {
+input  {
   background-color: #e3edf7;
   padding: 13px 20px;
   border: none;
@@ -112,3 +118,55 @@ input:focus {
 .InputContainer:after {
   box-shadow: var(--top-shadow);
 }
+/* .neuHeader{
+  border: none;
+  width: 230px;
+  height: 60px;
+  background: #ffffff;
+  position: relative;
+  background: #ffffff;
+  margin-bottom: 25px;
+  border-radius: 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+
+  opacity: 1;
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+    6px 6px 10px rgba(0, 0, 0, 0.2);
+    color: rgb(129, 179, 245);
+} */
+.neuButton {
+    border: none;
+    width: 230px;
+    height: 60px;
+    background: #f3f0f1;
+    position: relative;
+    background: #f3f0f1;
+    margin-bottom: 25px;
+    border-radius: 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+  box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+    inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+  color: #1979f7;
+}
+.navbar.bg-light{
+  border:none !important
+}
+  .neuButton:hover {
+    opacity: 1;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+      6px 6px 10px rgba(0, 0, 0, 0.2);
+      color: rgb(129, 179, 245);
+  }
+
+
+  .neuSpan {
+    line-height: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: semibold;
+  }
