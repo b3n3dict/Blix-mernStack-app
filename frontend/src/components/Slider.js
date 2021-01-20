@@ -21,6 +21,11 @@ const items = [
   },
 ];
 
-const Slider = () => <UncontrolledCarousel className="slider" items={items} />;
+const Slider = () => (
+  <UncontrolledCarousel
+    className="slider login__form-button mt-3"
+    items={items}
+  />
+);
 
 export default Slider;

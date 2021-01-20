@@ -1,10 +1,16 @@
 .categoryItems {
   /* box-shadow: rgba(0, 0, 0, 0.09) 1.95px 1.95px 1.6px; */
   border-radius: 12px;
-  width: 30px;
   cursor: pointer;
   transition: transform 500ms ease-in;
 }
+/* .categoryItems {
+  background: transparent;
+  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
+    -8px -8px 18px 0 rgba(255, 255, 255, 0.55);
+  border-radius: 40px;
+  padding: 4px 30px 20px;
+} */
 
 .categoryItems:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -19,5 +25,5 @@
 }
 
 .categoriesLogo {
-  width: 100px;
+  width: 80px;
 }
