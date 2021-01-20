@@ -1,5 +1,6 @@
 .category {
   display: flex;
+  flex-wrap: wrap;
   max-height: 300px;
   flex: 1;
   flex-direction: column;
@@ -9,7 +10,7 @@
   margin: 20px;
   min-width: 200px;
   padding: 22px;
-  max-width: 250px;
+  max-width: 235px;
   justify-content: space-between;
   cursor: pointer;
   padding-top: 30px;

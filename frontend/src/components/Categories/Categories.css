@@ -27,3 +27,8 @@
 .categoriesLogo {
   width: 80px;
 }
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

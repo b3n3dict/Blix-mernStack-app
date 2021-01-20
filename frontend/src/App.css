@@ -15,6 +15,7 @@ body {
 }
 .categoryItem__container {
   display: flex;
+  /* flex-wrap: wrap; */
 }
 .neu__form {
   max-width: 350px;

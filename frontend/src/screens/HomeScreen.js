@@ -22,7 +22,7 @@ const HomeScreen = ({ match }) => {
   return (
     <div className="container-fluid ">
       <Slider />
-      <div className="categoryItem__container mt-4">
+      <div className="categoryItem__container row mt-4">
         <Link to="/computer-accessories">
           <CategoryItem
             title="Computer & Accessories"
