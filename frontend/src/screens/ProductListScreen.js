@@ -83,7 +83,7 @@ const createProductHandler =()=>{
                             <td>&#8377;{product.price}</td>
                             <td>{product.category}</td>
                             <td>{product.brand}</td>
-                            <td>
+                            <td className="td-icon2">
                                 <LinkContainer to={`/admin/product/${product._id}/edit`}>
                                     <Button variant="light" className="btn-sm">
                                         <i className="fas fa-edit"></i>
