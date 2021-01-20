@@ -1,4 +1,5 @@
 import React from "react";
+import {Route} from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav, Navbar, Container, NavDropdown} from "react-bootstrap";
@@ -21,11 +22,11 @@ const Header = () => {
     dispatch({type:ORDER_LIST_MY_RESET})
     dispatch({type:USER_DETAILS_RESET})
   }
- const searchHandler =(e)=>{
+//  const searchHandler =(e)=>{
     
-  //  <Search searchItem={e.target.value}/>
-  console.log(e.target.value)
- }
+//   //  <Search searchItem={e.target.value}/>
+//   console.log(e.target.value)
+//  }
   return (
     <header>
       <Navbar className="fixed-top" bg="light" expand="lg" collapseOnSelect>
@@ -41,7 +42,9 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto ml-3">
               <div className="row mr-4 ml-1">
-              <div className="CardInner">
+              
+              <Route render={({history})=> <Search history={history}/>}/>
+              {/* <div className="CardInner">
       
         <div className="Icontainer">
         
@@ -53,7 +56,7 @@ const Header = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#657789" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="feather feather-search"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
         </div>
-       </div>
+       </div> */}
                 {/* <form className="form-inline my-2 my-lg-0">
                   <input
                     className="form-control mr-sm-2 bg-light"

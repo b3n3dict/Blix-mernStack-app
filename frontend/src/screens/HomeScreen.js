@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-// import { Row, Col } from "react-bootstrap";
+
 import { useDispatch} from "react-redux";
 // import Product from "../components/Product";
 import { listProducts } from "../actions/productActions";
@@ -9,14 +9,13 @@ import Slider from "../components/Slider";
 import Categories from "../components/Categories/Categories";
 import ProductList from "../components/ProductList";
 
-const HomeScreen = () => {
-  // const productList = useSelector((state) => state.productList);
-  // const { loading, error, products } = productList;
+const HomeScreen = ({match}) => {
+   const keyword = match.params.keyword
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
+    dispatch(listProducts(keyword));
+  }, [dispatch,keyword]);
 
   return (
     <div className="container-fluid">
