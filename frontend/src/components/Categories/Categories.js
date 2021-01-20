@@ -14,7 +14,7 @@ const Categories = () => {
     <div>
       <Container className="container mt-5 mb-5">
         <div className="row">
-          <LinkContainer to="/properties">
+          <LinkContainer to="/properties" className="category-items">
             <div className="col-md-2 col-4 text-center categoryItems pt-3 pb-3 w-80">
               <img
                 src={Properties}
@@ -24,7 +24,7 @@ const Categories = () => {
               <h6 className="mt-3">Properties</h6>
             </div>
           </LinkContainer>
-          <LinkContainer to="/vehicles">
+          <LinkContainer to="/vehicles" className="category-items">
             <div className="col-md-2 col-4 text-center categoryItems pt-3 pb-3 w-80">
               <img
                 src={Vehicles}
@@ -34,7 +34,7 @@ const Categories = () => {
               <h6 className="mt-3">Vehicles</h6>
             </div>
           </LinkContainer>
-          <LinkContainer to="/furnitures">
+          <LinkContainer to="/furnitures" className="category-items">
             <div className="col-md-2 col-4 text-center categoryItems pt-3 pb-3">
               <img
                 src={Furnitures}
@@ -44,7 +44,7 @@ const Categories = () => {
               <h6 className="mt-3">Furnitures</h6>
             </div>
           </LinkContainer>
-          <LinkContainer to="/appliances">
+          <LinkContainer to="/appliances" className="category-items">
             <div className="col-md-2 col-4 text-center categoryItems pt-3 pb-3">
               <img
                 src={Applicences}
@@ -54,7 +54,7 @@ const Categories = () => {
               <h6 className="mt-3"> Appliances</h6>
             </div>
           </LinkContainer>
-          <LinkContainer to="/electronics">
+          <LinkContainer to="/electronics" className="category-items">
             <div className="col-md-2 col-4 text-center categoryItems pt-3 pb-3">
               <img
                 src={Electronics}
@@ -64,7 +64,7 @@ const Categories = () => {
               <h6 className="mt-3">Electronics</h6>
             </div>
           </LinkContainer>
-          <LinkContainer to="/sports">
+          <LinkContainer to="/sports" className="category-items">
             <div className="col-md-2 col-4 text-center categoryItems pt-3 pb-3">
               <img src={Sports} alt="sports-logo" className="categoriesLogo" />
               <h6 className="mt-3">Sports</h6>

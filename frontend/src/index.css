@@ -10,6 +10,9 @@
 main {
   min-height: 80vh;
 }
+body {
+  background-color: rgb(235, 235, 235);
+}
 
 h3 {
   padding: 1rem 0;

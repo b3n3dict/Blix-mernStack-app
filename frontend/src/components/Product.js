@@ -6,7 +6,7 @@ import "./Product.css";
 
 const Product = ({ product }) => {
   return (
-    <Card className="my-3 p-3 rounded product">
+    <Card className="my-3 p-3 rounded product product-item">
       <Link to={`/product/${product._id}`}>
         <Card.Img
           className="product__image"
