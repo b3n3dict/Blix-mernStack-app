@@ -61,6 +61,7 @@ const UserEditScreen = ({ history, match }) => {
             <Form.Group controlId="name">
               <Form.Label>Name</Form.Label>
               <Form.Control
+                className="neu__form-input"
                 type="name"
                 placeholder="Enter name"
                 value={name}
@@ -71,6 +72,7 @@ const UserEditScreen = ({ history, match }) => {
             <Form.Group controlId="email">
               <Form.Label>Email Address</Form.Label>
               <Form.Control
+                className="neu__form-input"
                 type="email"
                 placeholder="Enter email"
                 value={email}
@@ -87,11 +89,7 @@ const UserEditScreen = ({ history, match }) => {
               ></Form.Check>
             </Form.Group>
 
-            <Button
-              type="submit"
-              variant="primary"
-              className="login__form-button mt-4"
-            >
+            <Button type="submit" variant="primary" className="neuButton mt-4">
               Update
             </Button>
           </Form>
