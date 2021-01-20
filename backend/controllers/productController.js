@@ -16,7 +16,7 @@ const getProducts = asyncHandler(async(req,res)=>{
     const products = await Product.find({...keyword})
    if(products == ''){
     res.status(404)
-    throw new Error('Product not found')
+    throw new Error('Product not found!')
    }else{
     res.json(products)
    }
