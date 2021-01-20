@@ -13,6 +13,9 @@ body {
   letter-spacing: -0.2px;
   background-color: #ebecf0;
 }
+.categoryItem__container {
+  display: flex;
+}
 .neu__form {
   max-width: 350px;
   background-color: #ebecf0;
