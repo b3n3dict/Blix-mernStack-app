@@ -1,39 +1,44 @@
 import React from "react";
-import {Route} from 'react-router-dom'
+import { Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
-import { Nav, Navbar, Container, NavDropdown} from "react-bootstrap";
-import { Badge } from '@material-ui/core';
-import logo from '../img/logo.jpeg'
-import Search from './Search'
-import {logout} from '../actions/userActions'
-import {USER_DETAILS_RESET} from '../constants/userConstants'
-import {ORDER_LIST_MY_RESET} from '../constants/orderConstants'
+import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
+import { Badge } from "@material-ui/core";
+import logo from "../img/logo.png";
+import Search from "./Search";
+import { logout } from "../actions/userActions";
+import { USER_DETAILS_RESET } from "../constants/userConstants";
+import { ORDER_LIST_MY_RESET } from "../constants/orderConstants";
 const Header = () => {
-  const dispatch = useDispatch() 
-  
- const userLogin = useSelector((state)=> state.userLogin)
-  const {userInfo} = userLogin
+  const dispatch = useDispatch();
 
- const cart = useSelector((state)=> state.cart) 
- const {cartItems}  = cart;
-  const logoutHandler=()=>{
-    dispatch(logout())
-    dispatch({type:ORDER_LIST_MY_RESET})
-    dispatch({type:USER_DETAILS_RESET})
-  }
-//  const searchHandler =(e)=>{
-    
-//   //  <Search searchItem={e.target.value}/>
-//   console.log(e.target.value)
-//  }
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+  const logoutHandler = () => {
+    dispatch(logout());
+    dispatch({ type: ORDER_LIST_MY_RESET });
+    dispatch({ type: USER_DETAILS_RESET });
+  };
+  //  const searchHandler =(e)=>{
+
+  //   //  <Search searchItem={e.target.value}/>
+  //   console.log(e.target.value)
+  //  }
   return (
     <header>
-      <Navbar className="fixed-top" bg="light" expand="lg" collapseOnSelect>
+      <Navbar
+        className="fixed-top"
+        style={{ backgroundColor: "#ebecf0" }}
+        expand="lg"
+        collapseOnSelect
+      >
         <Container>
           <LinkContainer to="/">
-            <Navbar bg="light">
-              <Navbar.Brand href="/" className="neuHeader">
+            <Navbar>
+              <Navbar.Brand href="/" className="neuHeader neuButton">
                 <img src={logo} width="150px" alt="" />
               </Navbar.Brand>
             </Navbar>
@@ -42,9 +47,8 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto ml-3">
               <div className="row mr-4 ml-1">
-              
-              <Route render={({history})=> <Search history={history}/>}/>
-              {/* <div className="CardInner">
+                <Route render={({ history }) => <Search history={history} />} />
+                {/* <div className="CardInner">
       
         <div className="Icontainer">
         
@@ -77,11 +81,10 @@ const Header = () => {
 
               <LinkContainer to="/cart">
                 <Nav.Link>
-                CART {''}
-                <Badge badgeContent={cartItems.length} color="primary">
-                <i className="fas fa-shopping-cart"></i>
-                      </Badge>
-                   
+                  CART {""}
+                  <Badge badgeContent={cartItems.length} color="primary">
+                    <i className="fas fa-shopping-cart"></i>
+                  </Badge>
                 </Nav.Link>
               </LinkContainer>
               {userInfo ? (

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 // import Product from "../components/Product";
 import { listProducts } from "../actions/productActions";
 // import Loader from "../components/Loader";
@@ -9,13 +9,13 @@ import Slider from "../components/Slider";
 import Categories from "../components/Categories/Categories";
 import ProductList from "../components/ProductList";
 
-const HomeScreen = ({match}) => {
-   const keyword = match.params.keyword
+const HomeScreen = ({ match }) => {
+  const keyword = match.params.keyword;
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(listProducts(keyword));
-  }, [dispatch,keyword]);
+  }, [dispatch, keyword]);
 
   return (
     <div className="container-fluid">

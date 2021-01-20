@@ -63,6 +63,7 @@ const ProfileScreen = ({ history, location }) => {
             <Form.Group controlId="name">
               <Form.Label>Name</Form.Label>
               <Form.Control
+                className="neu__form-input"
                 type="name"
                 placeholder="Enter Name"
                 value={name}
@@ -73,6 +74,7 @@ const ProfileScreen = ({ history, location }) => {
               <Form.Label>Email Address</Form.Label>
               <Form.Control
                 type="email"
+                className="neu__form-input"
                 placeholder="Enter email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -81,6 +83,7 @@ const ProfileScreen = ({ history, location }) => {
             <Form.Group controlId="password">
               <Form.Label>Password</Form.Label>
               <Form.Control
+                className="neu__form-input"
                 type="password"
                 placeholder="Enter password"
                 value={password}
@@ -91,6 +94,7 @@ const ProfileScreen = ({ history, location }) => {
             <Form.Group controlId="confirmPassword">
               <Form.Label>Confirm Password</Form.Label>
               <Form.Control
+                className="neu__form-input"
                 type="password"
                 placeholder="Confirm password"
                 value={confirmPassword}
@@ -98,7 +102,11 @@ const ProfileScreen = ({ history, location }) => {
                 requirednp
               ></Form.Control>
             </Form.Group>
-            <Button type="submit" varient="primary">
+            <Button
+              type="submit"
+              varient="primary"
+              className="neu__button mt-4 pb-4 pt-4"
+            >
               Update
             </Button>
           </Form>
@@ -144,7 +152,7 @@ const ProfileScreen = ({ history, location }) => {
                   </td>
                   <td>
                     <LinkContainer to={`/order/${order._id}`}>
-                      <Button className="btn-sm" varient="light">
+                      <Button className=" btn-sm" varient="light">
                         Details
                       </Button>
                     </LinkContainer>

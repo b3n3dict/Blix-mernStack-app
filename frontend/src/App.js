@@ -20,7 +20,8 @@ import UserEditScreen from "./screens/UserEditScreen";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductEditScreen from "./screens/ProductEditScreen";
 import OrderListScreen from "./screens/OrderListScreen";
-import SearchScreen from './screens/SearchScreen'
+import SearchScreen from "./screens/SearchScreen";
+import "./App.css";
 
 const App = () => {
   return (
@@ -29,9 +30,8 @@ const App = () => {
       <main className="py-2 mt-5 pt-5">
         <Container>
           <Switch>
-            
             <Route path="/" component={HomeScreen} exact />
-            <Route path="/search/:keyword" component={SearchScreen}  />
+            <Route path="/search/:keyword" component={SearchScreen} />
             <Route path="/admin/userlist" component={UserListScreen} />
             <Route path="/admin/user/:id/edit" component={UserEditScreen} />
             <Route path="/admin/productlist" component={ProductListScreen} />

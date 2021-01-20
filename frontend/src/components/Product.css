@@ -6,9 +6,9 @@
   transition: transform 300ms ease-in;
   border: none !important;
 }
-.product:hover {
+/* .product:hover {
   transform: scale(1.04);
-}
+} */
 .product__title {
   font-size: 15px;
   font-family: "Ubuntu", sans-serif;
@@ -36,10 +36,21 @@
 }
 .product-item {
   background: transparent;
-  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
-    -8px -8px 18px 0 rgba(255, 255, 255, 0.55);
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.3s ease-in-out;
   border-radius: 40px;
   padding: 4px 30px 20px;
   min-height: 380px;
   border-radius: 20px !important;
+}
+.product-item:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+.product-item:active {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff !important;
+}
+.product-item:focus {
+  outline: none;
 }
