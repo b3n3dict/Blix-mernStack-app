@@ -23,7 +23,7 @@ const items = [
 
 const Slider = () => (
   <UncontrolledCarousel
-    className="slider login__form-button mt-3"
+    className="slider login__form-button mt-3 "
     items={items}
   />
 );

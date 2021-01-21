@@ -38,7 +38,7 @@ const Header = () => {
         <Container>
           <LinkContainer to="/">
             <Navbar>
-              <Navbar.Brand href="/" className="neuHeader neuButton">
+              <Navbar.Brand href="/" className="neuHeader neu__button">
                 <img src={logo} width="150px" alt="" />
               </Navbar.Brand>
             </Navbar>
