@@ -7,8 +7,8 @@ import asyncHandler from 'express-async-handler'
 // @route GET /api/products
 // @access  public
 const getProducts = asyncHandler(async(req,res)=>{
-    const pageSize = 2
-    const page = Number(req.query.pageNumber) || 1
+    // const pageSize = 2
+    // const page = Number(req.query.pageNumber) || 1
 
 
     const keyword = req.query.keyword ? {
@@ -17,13 +17,14 @@ const getProducts = asyncHandler(async(req,res)=>{
             $options: 'i'
         } 
     }  : {}
-    const count = await Product.count({...keyword})
-    const products = await Product.find({...keyword}).limit(pageSize).skip(pageSize * (page -1))
+    // const count = await Product.count({...keyword})
+    const products = await Product.find({...keyword})
+    // .limit(pageSize).skip(pageSize * (page -1))
    if(products == ''){
     res.status(404)
     throw new Error('Product not found!')
    }else{
-    res.json({products,page,pages:Math.ceil(count / pageSize)})
+    res.json({products})  /* page,pages:Math.ceil(count / pageSize) */
    }
     
 })
