@@ -24,7 +24,7 @@ const getProducts = asyncHandler(async(req,res)=>{
     res.status(404)
     throw new Error('Product not found!')
    }else{
-    res.json({products})  /* page,pages:Math.ceil(count / pageSize) */
+    res.json(products)  /* page,pages:Math.ceil(count / pageSize) */
    }
     
 })
