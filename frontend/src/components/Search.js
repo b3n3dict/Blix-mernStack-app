@@ -1,3 +1,4 @@
+
 import React,{useState} from 'react'
 import {Form} from 'react-bootstrap'
 const Search = ({history}) => {
@@ -17,7 +18,7 @@ const Search = ({history}) => {
       <div className="Icontainer">
       
         <div className="InputContainer">
-          <input placeholder="Search Products" className="search" onChange={(e)=>setKeyword(e.target.value)}/>
+          <input placeholder="Search Products" className="search"  onChange={(e)=>setKeyword(e.target.value)}/>
            
         </div>
           <div className="Icon">
