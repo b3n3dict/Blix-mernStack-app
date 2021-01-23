@@ -17,9 +17,35 @@ import PS from "../img/ps-trans.png";
 import Controller from "../img/controller-trans.png";
 import { LinkContainer } from "react-router-bootstrap";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword;
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    Aos.init({
+      // Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate", // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 100, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 120, // offset (in px) from the original trigger point
+      delay: 100, // values from 0 to 3000, with step 50ms
+      duration: 3000, // values from 0 to 3000, with step 50ms
+      easing: "ease", // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+    });
+  }, []);
 
   useEffect(() => {
     dispatch(listProducts(keyword));
@@ -85,7 +111,7 @@ const HomeScreen = ({ match }) => {
           </div>
         </div>
       </div> */}
-      <div className="px-5">
+      <div className="px-5"  data-aos="fade-right">
         <div className="display__item row">
           <div className="display__item-desc col-md-6">
           <LinkContainer to='/product/600be827cabbed2f002d5225' style={{cursor: "pointer"}}>  
@@ -106,8 +132,9 @@ const HomeScreen = ({ match }) => {
           </div>
         </div>
       </div>
-      <div className="px-5">
-        <div className="display__item row">
+
+      <div className="px-5" data-aos="fade-left">
+        <div className="display__item">
           <div className="col-md-6 display__item-img ">
       
           <LinkContainer to='/product/600bedc2baba0b4804ca72df' style={{cursor: "pointer"}}><img src={Camera} alt="" /></LinkContainer>
@@ -126,8 +153,8 @@ const HomeScreen = ({ match }) => {
           </div>
         </div>
       </div>
-      <div className="px-5">
-        <div className="display__item row">
+      <div className="px-5" data-aos="fade-right">
+        <div className=" display__item">
           <div className="display__item-desc col-md-6">
             <h5>
               Sony PS4 1TB Slim Console with Additional Dualshock Controller
