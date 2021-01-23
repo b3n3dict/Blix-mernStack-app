@@ -35,7 +35,7 @@ const Header = () => {
         expand="lg"
         collapseOnSelect
       >
-        <Container>
+        <>
           <LinkContainer to="/">
             <Navbar>
               <Navbar.Brand href="/" className="neuHeader neu__button">
@@ -118,7 +118,7 @@ const Header = () => {
               )}
             </Nav>
           </Navbar.Collapse>
-        </Container>
+        </>
       </Navbar>
     </header>
   );

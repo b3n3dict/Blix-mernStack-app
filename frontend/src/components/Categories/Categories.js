@@ -17,7 +17,7 @@ const Categories = () => {
           <LinkContainer
             style={{ width: "80px !important" }}
             to="/properties"
-            className="category-items neu__button"
+            className="category-items neu__category"
           >
             <div className="col-md-2 col-4 text-center categoryItems pt-4 pb-4 ">
               <img
@@ -28,7 +28,7 @@ const Categories = () => {
               <h6 className="mt-3">Properties</h6>
             </div>
           </LinkContainer>
-          {/* <LinkContainer to="/vehicles" className="category-items neu__button">
+          {/* <LinkContainer to="/vehicles" className="category-items neu__category">
             <div className="col-md-2 col-4 text-center categoryItems pt-4 pb-4">
               <img
                 src={Vehicles}
@@ -40,7 +40,7 @@ const Categories = () => {
           </LinkContainer> */}
           <LinkContainer
             to="/furnitures"
-            className="category-items neu__button"
+            className="category-items neu__category"
           >
             <div className="col-md-2 col-4 text-center categoryItems pt-4 pb-4">
               <img
@@ -53,7 +53,7 @@ const Categories = () => {
           </LinkContainer>
           <LinkContainer
             to="/appliances"
-            className="category-items neu__button"
+            className="category-items neu__category"
           >
             <div className="col-md-2 col-4 text-center categoryItems pt-4 pb-4">
               <img
@@ -66,7 +66,7 @@ const Categories = () => {
           </LinkContainer>
           <LinkContainer
             to="/electronics"
-            className="category-items neu__button"
+            className="category-items neu__category"
           >
             <div className="col-md-2 col-4 text-center categoryItems pt-4 pb-4">
               <img
@@ -77,7 +77,7 @@ const Categories = () => {
               <h6 className="mt-3">Electronics</h6>
             </div>
           </LinkContainer>
-          <LinkContainer to="/sports" className="category-items neu__button">
+          <LinkContainer to="/sports" className="category-items neu__category">
             <div className="col-md-2 col-4 text-center categoryItems pt-4 pb-4">
               <img src={Sports} alt="sports-logo" className="categoriesLogo" />
               <h6 className="mt-3">Sports</h6>

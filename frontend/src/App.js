@@ -28,7 +28,7 @@ const App = () => {
     <Router>
       <Header />
       <main className="py-2 mt-5 pt-5">
-        <Container>
+        <>
           <Switch>
             <Route path="/" component={HomeScreen} exact />
             <Route path="/search/:keyword" component={SearchScreen} />
@@ -52,7 +52,7 @@ const App = () => {
             <Route path="/order/:id" component={OrderScreen} />
             <Route component={NotFound} />
           </Switch>
-        </Container>
+        </>
       </main>
       <Footer />
     </Router>
