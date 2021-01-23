@@ -156,10 +156,13 @@ const HomeScreen = ({ match }) => {
       <div className="px-5" data-aos="fade-right">
         <div className=" display__item">
           <div className="display__item-desc col-md-6">
-            <h5>
+          <LinkContainer to='/product/600c0aa0a8e8774f6c6652e1' style={{cursor: "pointer"}}>  
+          <h5>
               Sony PS4 1TB Slim Console with Additional Dualshock Controller
               (Black)
             </h5>
+            </LinkContainer>
+            
             <br />
             <p>
               A Stunning New Design: A slimmer and lighter console with stylish
@@ -170,7 +173,8 @@ const HomeScreen = ({ match }) => {
             </p>
           </div>
           <div className="col-md-6 display__item-img">
-            <img src={Controller} alt="" />
+          <LinkContainer to='/product/600c0aa0a8e8774f6c6652e1' style={{cursor: "pointer"}}><img src={Controller} alt="" /></LinkContainer>
+            
           </div>
         </div>
       </div>
