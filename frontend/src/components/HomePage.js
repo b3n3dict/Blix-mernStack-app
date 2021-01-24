@@ -45,11 +45,11 @@ const HomePage = () => {
     setCircleColor(color);
   };
   return (
-    <div className="container">
-      <div class="circle" style={{ backgroundColor: circleColor }}></div>
+    <div className="section">
+      <div className="circle" style={{ backgroundColor: circleColor }}></div>
 
-      <div class="content">
-        <div class="textBox">
+      <div className="content">
+        <div className="textBox">
           <h2>
             The Best Marketers are
             <br />
@@ -62,16 +62,16 @@ const HomePage = () => {
           </p>
           <a href="#">Learn More </a>
         </div>
-        <div class="imgBox">
-          <img src={image} class="starbucks" id="starbucks" alt="" />
+        <div className="imgBox">
+          <img src={image} className="starbucks" id="starbucks" alt="" />
         </div>
       </div>
-      <ul class="thumb">
+      <ul className="thumb" id="thumbImg">
         <li>
           <img
             src={Camera}
             onMouseOver={() => (
-              imgSlider(Camera), circleColorChange("#2176bd")
+              imgSlider(Camera), circleColorChange("#6C6C6C")
             )}
             alt=""
           />
@@ -79,11 +79,11 @@ const HomePage = () => {
         <li>
           <img
             src={Mac}
-            onMouseOver={() => (imgSlider(Mac), circleColorChange("#e60073"))}
+            onMouseOver={() => (imgSlider(Mac), circleColorChange("#2176bd"))}
             alt=""
           />
         </li>
-        <li>
+        <li className="mob__res">
           <img
             src={Controller}
             onMouseOver={() => (
@@ -92,7 +92,7 @@ const HomePage = () => {
             alt=""
           />
         </li>
-        <li>
+        <li id="mob__res4">
           <img
             src={Iphone11}
             onMouseOver={() => (
@@ -101,7 +101,7 @@ const HomePage = () => {
             alt=""
           />
         </li>{" "}
-        <li>
+        <li id="mob__res1">
           <img
             src={Desktop}
             onMouseOver={() => (
@@ -112,6 +112,7 @@ const HomePage = () => {
         </li>{" "}
         <li>
           <img
+            id="mob__res2"
             src={Couch}
             onMouseOver={() => (imgSlider(Couch), circleColorChange("#017143"))}
             alt=""
@@ -119,9 +120,10 @@ const HomePage = () => {
         </li>{" "}
         <li>
           <img
+            id="mob__res3"
             src={Iphones}
             onMouseOver={() => (
-              imgSlider(Iphones), circleColorChange("#ff5050")
+              imgSlider(Iphones), circleColorChange("#ff0000")
             )}
             alt=""
           />

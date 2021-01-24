@@ -53,10 +53,10 @@ const HomeScreen = ({ match }) => {
   }, [dispatch, keyword]);
 
   return (
-    <div className="container-fluid ">
+    <div className="">
       <HomePage className="mb-5" /> <br />
       {/* <Slider /> */}
-      <div className="categoryItem__container row mt-4 pt-5">
+      <div className="categoryItem__container mt-4 pt-5">
         <Link to="/computer-accessories">
           <CategoryItem
             title="Computer & Accessories"
@@ -113,8 +113,8 @@ const HomeScreen = ({ match }) => {
           </div>
         </div>
       </div> */}
-      <div className="px-5" data-aos="fade-right">
-        <div className="display__item row">
+      <div className="px-5">
+        <div className="display__item row" data-aos="fade-right">
           <div className="display__item-desc col-md-6">
             <LinkContainer
               to="/product/600be827cabbed2f002d5225"
@@ -142,8 +142,8 @@ const HomeScreen = ({ match }) => {
           </div>
         </div>
       </div>
-      <div className="px-5" data-aos="fade-left">
-        <div className="display__item">
+      <div className="px-5">
+        <div className="display__item row ml-2" data-aos="zoom-in-left">
           <div className="col-md-6 display__item-img ">
             <LinkContainer
               to="/product/600bedc2baba0b4804ca72df"
@@ -171,8 +171,8 @@ const HomeScreen = ({ match }) => {
           </div>
         </div>
       </div>
-      <div className="px-5" data-aos="fade-right">
-        <div className=" display__item">
+      <div className="px-5">
+        <div className=" display__item row" data-aos="fade-right">
           <div className="display__item-desc col-md-6">
             <LinkContainer
               to="/product/600c0aa0a8e8774f6c6652e1"
@@ -205,7 +205,7 @@ const HomeScreen = ({ match }) => {
       </div>
       <ProductList title="Latest Products" />
       {/* <ProductList title="New Trends" /> */}
-      <Slider />
+      {/* <Slider /> */}
       <ProductList title="Your Recommendations" />
       {/* <h1>Latest Products</h1>
       {loading ? (
