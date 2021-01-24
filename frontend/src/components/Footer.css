@@ -1,6 +1,79 @@
 .footer {
-  background-color: rgb(218, 208, 208);
+  color: aliceblue;
+  background-color:#3b3b3b;
   margin: 0 !important;
   margin-right: 0 !important;
   margin-left: 0 !important;
 }
+.inFt, .ftb {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  border-radius:16px*20;
+  padding: 16px;
+  background-color:#272727;
+  text-shadow: 1px 1px 0 #212121;
+}
+
+label {
+  display: block;
+  margin-bottom:16px*1.5;
+  width: 100%;
+}
+
+ .inFt {
+  color: #feeeee;
+  caret-color: #feeeee;
+  margin-right: 16px/2;
+  box-shadow:  inset 2px 2px 5px #141414, inset -5px -5px 10px #212121;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.inFt:focus{
+  background-color: #272727;
+}
+
+ .ftb {
+ 
+  color:#61677C;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px #212121,  5px 5px 20px #141414;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+  
+.ftb:hover {
+    box-shadow: -2px -2px 5px #212121, 2px 2px 5px #141414;
+  }
+  
+  .ftb:active {
+    box-shadow: inset 1px 1px 2px #141414, inset -1px -1px 2px #212121;
+  }
+  
+ .icon {
+    margin-right: 16px/2;
+  }
+  
+  .ftb.unit {
+    border-radius: 16px/2;
+    line-height: 0;
+    width: 16px*3;
+    height: 16px*3;
+    display:inline-flex;
+    justify-content: center;
+    align-items:center;
+    margin: 0 16px/2;
+    font-size: 16px*1.2;
+    
+  
+  }
+  .icon {
+    color: #5372fe;
+    margin-right: 0; 
+  }

@@ -46,7 +46,7 @@ button {
   font-size: $ruler;
   border-radius: $ruler*20;
   padding: $ruler;
-  background-color:$color-bg  !important;
+  background-color:$color-bg  ;
   text-shadow: 1px 1px 0 $color-white;
 }
 
@@ -73,7 +73,7 @@ label {
   box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow !important;
 }
 .btn{
-  color:#6a87ec !important;
+  color:#6a87ec ;
   box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
@@ -117,9 +117,9 @@ label {
 
 button {
   
-  color:#6a87ec !important;
+  color:#6a87ec ;
  
-  box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
+  // box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   font-weight: 600;

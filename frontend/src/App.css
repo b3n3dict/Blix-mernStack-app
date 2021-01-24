@@ -207,3 +207,43 @@ label {
   transform: scale(1.03);
   opacity: 1;
 } */
+
+.neu__footer {
+  font-family: 'Montserrat', sans-serif;
+  color:  #ebecf0;;
+  font-weight: bold;
+  box-shadow: 4px 4px 20px rgb(77, 75, 75), 5px 5px 20px #3f3d3d;
+  transition: all 0.2s ease-in-out;
+ 
+  font-weight: 600;
+
+  width: 100%;
+
+  width: 100%;
+  /* display: inline-flex; */
+  /* justify-content: center;
+  align-items: center; */
+  margin: 0 16px/2;
+  font-size: 16px * 1.2;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  border-radius: 7px;
+  /* margin: 10px; */
+  /* padding: 16px; */
+  background-color:#272727;
+  /* text-shadow: 1px 1px 0 #fff; */
+}
+
+.neu__footer:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+.neu__footer:active {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff !important;
+}
+.neu__footer:focus {
+  outline: none;
+}
+.mdRow{
+  padding:0 10px;
+}
