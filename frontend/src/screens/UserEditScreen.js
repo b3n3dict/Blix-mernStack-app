@@ -45,10 +45,10 @@ const UserEditScreen = ({ history, match }) => {
   };
   return (
     <>
-      <Link to="/admin/userlist" className="btn btn-light my-3">
+      <Link to="/admin/userlist" className="btn btn-light my-3 ml-5">
         Go Back
       </Link>
-      <FormContainer>
+      <FormContainer className="mx-5">
         <h1>Edit User</h1>
         {loadingUdate && <Loader />}
         {errorUpdate && <Message severity="error">{errorUpdate}</Message>}

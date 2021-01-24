@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <header>
       <Navbar
-        className="fixed-top"
+        className="fixed-top mr-5 pl-5 pr-5"
         style={{ backgroundColor: "#ebecf0" }}
         expand="lg"
         collapseOnSelect

@@ -33,7 +33,7 @@ const CartScreen = ({ match, location, history }) => {
     history.push("/login?redirect=shipping");
   };
   return (
-    <Row>
+    <Row className="mx-5">
       <Col md={8}>
         <h1>Shoping Cart</h1>
         {cartItems.length === 0 ? (
@@ -79,7 +79,7 @@ const CartScreen = ({ match, location, history }) => {
                   </Col>
                   <Col md={2}>
                     <Button
-                    className="btn-icon"
+                      className="btn-icon"
                       type="button"
                       varient="light"
                       onClick={() => {
@@ -108,7 +108,13 @@ const CartScreen = ({ match, location, history }) => {
                 .reduce((acc, item) => acc + item.qty * item.price, 0)
                 .toFixed(2)}
             </ListGroup.Item>
-            <ListGroup.Item style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+            <ListGroup.Item
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
               <button
                 type="button"
                 className="neuButton"

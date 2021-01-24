@@ -15,9 +15,11 @@ import Camera from "../img/cam-trans.png";
 import Mac from "../img/mac-trans.png";
 import PS from "../img/ps-trans.png";
 import Controller from "../img/controller-trans.png";
+import { LinkContainer } from "react-router-bootstrap";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
+import HomePage from "../components/HomePage";
 
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword;
@@ -52,8 +54,9 @@ const HomeScreen = ({ match }) => {
 
   return (
     <div className="container-fluid ">
-      <Slider />
-      <div className="categoryItem__container row mt-4">
+      <HomePage className="mb-5" /> <br />
+      {/* <Slider /> */}
+      <div className="categoryItem__container row mt-4 pt-5">
         <Link to="/computer-accessories">
           <CategoryItem
             title="Computer & Accessories"
@@ -110,36 +113,52 @@ const HomeScreen = ({ match }) => {
           </div>
         </div>
       </div> */}
-
-      <div>
-        <div className="px-5" data-aos="fade-right">
-          <div className="display__item">
-            <div className="display__item-desc col-md-6">
+      <div className="px-5" data-aos="fade-right">
+        <div className="display__item row">
+          <div className="display__item-desc col-md-6">
+            <LinkContainer
+              to="/product/600be827cabbed2f002d5225"
+              style={{ cursor: "pointer" }}
+            >
               <h5>
                 Apple MacBook Pro (16-inch, 16GB RAM, 1TB Storage, 2.3GHz 9th
                 Gen Intel Core i9) - Space Grey
               </h5>
-              <br />
-              <p>
-                Ninth-generation 8-core Intel Core i9 processor Stunning 16-inch
-                Retina display with True Tone technology Touch Bar and Touch ID
-                AMD Radeon Pro 5500M graphics with GDDR6 memory Ultrafast SSD
-              </p>
-            </div>
-            <div className="col-md-6 display__item-img">
+            </LinkContainer>
+            <br />
+            <p>
+              Ninth-generation 8-core Intel Core i9 processor Stunning 16-inch
+              Retina display with True Tone technology Touch Bar and Touch ID
+              AMD Radeon Pro 5500M graphics with GDDR6 memory Ultrafast SSD
+            </p>
+          </div>
+          <div className="col-md-6 display__item-img">
+            <LinkContainer
+              to="/product/600be827cabbed2f002d5225"
+              style={{ cursor: "pointer" }}
+            >
               <img src={Mac} alt="" />
-            </div>
+            </LinkContainer>
           </div>
         </div>
       </div>
-
       <div className="px-5" data-aos="fade-left">
         <div className="display__item">
           <div className="col-md-6 display__item-img ">
-            <img src={Camera} alt="" />
+            <LinkContainer
+              to="/product/600bedc2baba0b4804ca72df"
+              style={{ cursor: "pointer" }}
+            >
+              <img src={Camera} alt="" />
+            </LinkContainer>
           </div>
           <div className="display__item-desc col-md-6">
-            <h5>Sony Alpha ILCE-7M3K Full-Frame 24.2MP</h5>
+            <LinkContainer
+              to="/product/600bedc2baba0b4804ca72df"
+              style={{ cursor: "pointer" }}
+            >
+              <h5>Sony Alpha ILCE-7M3K Full-Frame 24.2MP</h5>
+            </LinkContainer>
             <br />
             <p>
               Mirrorless Camera with 28-70mm Zoom Lens (4K Full Frame, Real-Time
@@ -155,10 +174,16 @@ const HomeScreen = ({ match }) => {
       <div className="px-5" data-aos="fade-right">
         <div className=" display__item">
           <div className="display__item-desc col-md-6">
-            <h5>
-              Sony PS4 1TB Slim Console with Additional Dualshock Controller
-              (Black)
-            </h5>
+            <LinkContainer
+              to="/product/600c0aa0a8e8774f6c6652e1"
+              style={{ cursor: "pointer" }}
+            >
+              <h5>
+                Sony PS4 1TB Slim Console with Additional Dualshock Controller
+                (Black)
+              </h5>
+            </LinkContainer>
+
             <br />
             <p>
               A Stunning New Design: A slimmer and lighter console with stylish
@@ -169,15 +194,19 @@ const HomeScreen = ({ match }) => {
             </p>
           </div>
           <div className="col-md-6 display__item-img">
-            <img src={Controller} alt="" />
+            <LinkContainer
+              to="/product/600c0aa0a8e8774f6c6652e1"
+              style={{ cursor: "pointer" }}
+            >
+              <img src={Controller} alt="" />
+            </LinkContainer>
           </div>
         </div>
       </div>
-
       <ProductList title="Latest Products" />
-      <ProductList title="New Trends" />
+      {/* <ProductList title="New Trends" /> */}
+      <Slider />
       <ProductList title="Your Recommendations" />
-
       {/* <h1>Latest Products</h1>
       {loading ? (
         <Loader />
