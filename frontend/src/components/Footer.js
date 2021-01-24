@@ -19,7 +19,7 @@ const FooterPage = () => {
 
     <MDBFooter color="blue" className="font-small footer pt-4 mt-4 neu__footer">
     {email && <Message  severity="success">Email Sent. We will contact you with in two days</Message> } 
-      <MDBContainer fluid className="text-center text-md-left mt-5 ">
+      <MDBContainer fluid className="text-center text-md-left mt-4 ">
         <MDBRow className="mdRow">
           <MDBCol md="3">
             <h5 className="title">Footer Content</h5>
