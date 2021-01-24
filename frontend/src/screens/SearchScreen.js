@@ -5,15 +5,19 @@ import Product from "../components/Product";
 import { listProducts } from "../actions/productActions";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
-
+import Paginate from '../components/Paginate'
 const SearchScreen = ({ match }) => {
   const keyword = match.params.keyword;
-  const dispatch = useDispatch();
+ 
+  const pageNumber = match.params.pageNumber || 1
+  
   const productList = useSelector((state) => state.productList);
-  const { loading, error, products } = productList;
+  const { loading, error, products,page,pages } = productList;
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    dispatch(listProducts(keyword));
-  }, [dispatch, keyword]);
+    dispatch(listProducts(keyword,pageNumber));
+  }, [dispatch, keyword,pageNumber]);
 
   return (
     <div className="productList">
@@ -24,6 +28,7 @@ const SearchScreen = ({ match }) => {
         ) : error ? (
           <Message severity="error">{error}</Message>
         ) : (
+          <>
           <Row className="productList__body2">
             {products.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
@@ -31,6 +36,8 @@ const SearchScreen = ({ match }) => {
               </Col>
             ))}
           </Row>
+          <Paginate pages={pages} page={page} keyword={keyword ? keyword : ''}/>
+          </>
         )}
       </div>
     </div>

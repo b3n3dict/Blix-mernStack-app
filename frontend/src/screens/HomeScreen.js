@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 // import Product from "../components/Product";
 import { listProducts } from "../actions/productActions";
 // import Loader from "../components/Loader";
@@ -10,19 +10,27 @@ import Categories from "../components/Categories/Categories";
 import CategoryItem from "../components/CategoryItem";
 import { Link } from "react-router-dom";
 import ProductList from "../components/ProductList";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Camera from "../img/cam-trans.png";
 import Mac from "../img/mac-trans.png";
 import PS from "../img/ps-trans.png";
 import Controller from "../img/controller-trans.png";
 import { LinkContainer } from "react-router-bootstrap";
-
+import Paginate from '../components/Paginate'
 import Aos from "aos";
 import "aos/dist/aos.css";
 import HomePage from "../components/HomePage";
+import Loader from "../components/Loader";
+import Message from "../components/Message";
+import Product from "../components/Product";
 
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword;
+  const pageNumber = match.params.pageNumber || 1
+  
+  const productList = useSelector((state) => state.productList);
+  const { loading, error, products,page,pages } = productList;
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -49,8 +57,8 @@ const HomeScreen = ({ match }) => {
   }, []);
 
   useEffect(() => {
-    dispatch(listProducts(keyword));
-  }, [dispatch, keyword]);
+    dispatch(listProducts(keyword,pageNumber));
+  }, [dispatch, keyword,pageNumber]);
 
   return (
     <div className="">
@@ -203,16 +211,17 @@ const HomeScreen = ({ match }) => {
           </div>
         </div>
       </div>
-      <ProductList title="Latest Products" />
+      {/* <ProductList title="Latest Products" /> */}
       {/* <ProductList title="New Trends" /> */}
       {/* <Slider /> */}
       <ProductList title="Your Recommendations" />
-      {/* <h1>Latest Products</h1>
+      <h1>Latest Products</h1>
       {loading ? (
         <Loader />
       ) : error ? (
         <Message severity="error">{error}</Message>
       ) : (
+        <>
         <Row>
           {products.map((product) => (
             <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
@@ -220,7 +229,9 @@ const HomeScreen = ({ match }) => {
             </Col>
           ))}
         </Row>
-      )} */}
+        <Paginate pages={pages} page={page} keyword={keyword ? keyword : ''}/>
+        </>
+      )}
     </div>
   );
 };

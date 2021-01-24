@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./HomePage.css";
 import Camera from "../img/cam-trans.png";
 import Mac from "../img/mac-trans.png";
-import PS from "../img/ps-trans.png";
 import Controller from "../img/controller-trans.png";
 import Couch from "../img/couch-trans.png";
 import Iphone11 from "../img/iphone11-trans.png";
 import Desktop from "../img/desktop-trans.png";
 import Iphones from "../img/iphone-trans.png";
 import AOS from "aos";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   useEffect(() => {
@@ -60,7 +60,7 @@ const HomePage = () => {
             merchandising and so forth and so on. And everybody was getting into
             catalogs and e-commerce and - you name it. It was just intense.
           </p>
-          <a href="#">Learn More </a>
+          <Link to="#">Learn More </Link>
         </div>
         <div className="imgBox">
           <img src={image} className="starbucks" id="starbucks" alt="" />
