@@ -18,13 +18,13 @@ const SearchScreen = ({ match }) => {
   return (
     <div className="productList">
       <h3 className="productList__header">Searched Products</h3>
-      <div className="productList__body">
+      <div className="productList__body2">
         {loading ? (
           <Loader />
         ) : error ? (
           <Message severity="error">{error}</Message>
         ) : (
-          <Row className="productList__body">
+          <Row className="productList__body2">
             {products.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
                 <Product product={product} />
