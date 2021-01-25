@@ -54,9 +54,9 @@ const HomeScreen = ({ match }) => {
 
   return (
     <div className="">
-      <HomePage className="mb-5" /> <br />
+      <HomePage />
       {/* <Slider /> */}
-      <div className="categoryItem__container mt-4 pt-5">
+      <div className="categoryItem__container">
         <Link to="/computer-accessories">
           <CategoryItem
             title="Computer & Accessories"

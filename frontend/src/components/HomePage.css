@@ -6,6 +6,7 @@
 }
 .section {
   width: 100%;
+  height: 100vh;
   /* padding-left: 40px; min-height: 100vh; */
   display: flex;
   justify-content: space-between;
@@ -22,6 +23,7 @@
 .content .textBox {
   position: relative;
   max-width: 650px;
+  padding-bottom: 200px;
   padding-left: 30px;
 }
 .content .textBox h2 {
@@ -110,7 +112,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   /* background-color: #017143; */
   clip-path: circle(600px at right 800px);
 }

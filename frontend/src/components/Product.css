@@ -59,9 +59,9 @@
 .product-item:focus {
   outline: none;
 }
-.producList__body {
+/* .producList__body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
+} */
