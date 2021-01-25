@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <header>
       <Navbar
-        className="fixed-top pr-5 mr-5"
+        className="fixed-top pr-5"
         style={{ backgroundColor: "#ebecf0" }}
         expand="lg"
         collapseOnSelect
@@ -104,7 +104,7 @@ const Header = () => {
                 </LinkContainer>
               )}
               {userInfo && userInfo.isAdmin && (
-                <NavDropdown title="ADMIN" id="adminmenu">
+                <NavDropdown title="ADMIN" id="adminmenu" className="pr-5">
                   <LinkContainer to="/admin/userList">
                     <NavDropdown.Item>Users</NavDropdown.Item>
                   </LinkContainer>
