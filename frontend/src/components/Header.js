@@ -2,7 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
-import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Badge } from "@material-ui/core";
 import logo from "../img/logo.png";
 import Search from "./Search";
@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <header>
       <Navbar
-        className="fixed-top pl-5 pr-5"
+        className="fixed-top pr-5 mr-5"
         style={{ backgroundColor: "#ebecf0" }}
         expand="lg"
         collapseOnSelect

@@ -96,9 +96,9 @@ const CartScreen = ({ match, location, history }) => {
         )}
       </Col>
       <Col md={4}>
-        <Card>
+        <Card className="neu__button mt-5">
           <ListGroup variant="flush">
-            <ListGroup.Item>
+            <ListGroup.Item style={{ backgroundColor: "#ebecf0" }}>
               <h2>
                 Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
                 items{" "}
@@ -113,6 +113,7 @@ const CartScreen = ({ match, location, history }) => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                backgroundColor: "#ebecf0",
               }}
             >
               <button

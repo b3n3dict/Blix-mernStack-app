@@ -4,17 +4,17 @@ import { useDispatch } from "react-redux";
 // import Product from "../components/Product";
 import { listProducts } from "../actions/productActions";
 // import Loader from "../components/Loader";
-import Slider from "../components/Slider";
+// import Slider from "../components/Slider";
 // import Message from "../components/Message";
 import Categories from "../components/Categories/Categories";
 import CategoryItem from "../components/CategoryItem";
 import { Link } from "react-router-dom";
 import ProductList from "../components/ProductList";
-import { Container } from "react-bootstrap";
+// import { Container } from "react-bootstrap";
 import Camera from "../img/cam-trans.png";
 import Mac from "../img/mac-trans.png";
 import PS from "../img/ps-trans.png";
-import Controller from "../img/controller-trans.png";
+// import Controller from "../img/controller-trans.png";
 import { LinkContainer } from "react-router-bootstrap";
 
 import Aos from "aos";
@@ -56,7 +56,7 @@ const HomeScreen = ({ match }) => {
     <div className="">
       <HomePage />
       {/* <Slider /> */}
-      <div className="categoryItem__container">
+      <div className="categoryItem__container mt-3">
         <Link to="/computer-accessories">
           <CategoryItem
             title="Computer & Accessories"
@@ -198,7 +198,7 @@ const HomeScreen = ({ match }) => {
               to="/product/600c0aa0a8e8774f6c6652e1"
               style={{ cursor: "pointer" }}
             >
-              <img src={Controller} alt="" />
+              <img src={PS} alt="" />
             </LinkContainer>
           </div>
         </div>

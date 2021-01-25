@@ -40,14 +40,14 @@
 .content .textBox p {
   color: #333;
 }
-.content .textBox a {
+.content .textBox h6 {
   display: inline-block;
+  font-weight: 100;
   margin-top: 20px;
   padding: 8px 20px;
   background-color: #3075c4;
   color: #fff;
   border-radius: 40px;
-  font-weight: 500;
   letter-spacing: 1px;
   text-decoration: none;
 }
@@ -60,11 +60,12 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 50px;
-  margin-top: 50px;
+  margin-top: 0px;
+  margin-bottom: 150px;
 }
 .content .imgBox img {
   max-width: 440px;
-  max-height: 330px;
+  max-height: 360px;
   /* min-height: 400px; */
 }
 
@@ -155,6 +156,8 @@
     width: 350px;
     height: 300px;
     padding: 0 !important;
+    margin-top: 50px;
+    margin-bottom: 0;
   }
   .thumb {
     display: flex !important;

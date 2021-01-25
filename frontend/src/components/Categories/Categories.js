@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import "./Categories.css";
 import { LinkContainer } from "react-router-bootstrap";
 import Properties from "./CategoryImages/properties-logo.png";
-import Vehicles from "./CategoryImages/vehicles-logo.png";
+// import Vehicles from "./CategoryImages/vehicles-logo.png";
 import Furnitures from "./CategoryImages/furniture-logo.png";
 import Applicences from "./CategoryImages/appliances-logo.png";
 import Electronics from "./CategoryImages/electronics-logo.png";

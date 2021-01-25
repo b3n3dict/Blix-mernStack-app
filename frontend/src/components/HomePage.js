@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./HomePage.css";
 import Camera from "../img/cam-trans.png";
 import Mac from "../img/mac-trans.png";
-import PS from "../img/ps-trans.png";
+// import PS from "../img/ps-trans.png";
 import Controller from "../img/controller-trans.png";
 import Couch from "../img/couch-trans.png";
 import Iphone11 from "../img/iphone11-trans.png";
 import Desktop from "../img/desktop-trans.png";
 import Iphones from "../img/iphone-trans.png";
 import AOS from "aos";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   useEffect(() => {
@@ -60,7 +61,9 @@ const HomePage = () => {
             merchandising and so forth and so on. And everybody was getting into
             catalogs and e-commerce and - you name it. It was just intense.
           </p>
-          <a href="#">Learn More </a>
+          <Link to="/products">
+            <h6>Learn More </h6>
+          </Link>
         </div>
         <div className="imgBox">
           <img src={image} className="starbucks" id="starbucks" alt="" />
@@ -70,43 +73,50 @@ const HomePage = () => {
         <li>
           <img
             src={Camera}
-            onMouseOver={() => (
-              imgSlider(Camera), circleColorChange("#6C6C6C")
-            )}
+            onMouseOver={() => {
+              imgSlider(Camera);
+              circleColorChange("#6C6C6C");
+            }}
             alt=""
           />
         </li>
         <li>
           <img
             src={Mac}
-            onMouseOver={() => (imgSlider(Mac), circleColorChange("#2176bd"))}
+            onMouseOver={() => {
+              imgSlider(Mac);
+              circleColorChange("#2176bd");
+            }}
             alt=""
           />
         </li>
         <li className="mob__res">
           <img
             src={Controller}
-            onMouseOver={() => (
-              imgSlider(Controller), circleColorChange("#b3b3cc")
-            )}
+            onMouseOver={() => {
+              imgSlider(Controller);
+              circleColorChange("#b3b3cc");
+            }}
             alt=""
           />
         </li>
         <li id="mob__res4">
           <img
             src={Iphone11}
-            onMouseOver={() => (
-              imgSlider(Iphone11), circleColorChange("#666699")
-            )}
+            onMouseOver={() => {
+              imgSlider(Iphone11);
+              circleColorChange("#666699");
+            }}
             alt=""
           />
         </li>{" "}
         <li id="mob__res1">
           <img
             src={Desktop}
-            onMouseOver={() => (
-              imgSlider(Desktop), circleColorChange("#3d3d5c")
-            )}
+            onMouseOver={() => {
+              imgSlider(Desktop);
+              circleColorChange("#3d3d5c");
+            }}
             alt=""
           />
         </li>{" "}
@@ -114,7 +124,10 @@ const HomePage = () => {
           <img
             id="mob__res2"
             src={Couch}
-            onMouseOver={() => (imgSlider(Couch), circleColorChange("#017143"))}
+            onMouseOver={() => {
+              imgSlider(Couch);
+              circleColorChange("#017143");
+            }}
             alt=""
           />
         </li>{" "}
@@ -122,9 +135,10 @@ const HomePage = () => {
           <img
             id="mob__res3"
             src={Iphones}
-            onMouseOver={() => (
-              imgSlider(Iphones), circleColorChange("#ff0000")
-            )}
+            onMouseOver={() => {
+              imgSlider(Iphones);
+              circleColorChange("#ff0000");
+            }}
             alt=""
           />
         </li>
