@@ -3,6 +3,7 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import "./Footer.css";
 import SendIcon from "@material-ui/icons/Send";
 import Message from "./Message";
+import { Link } from "react-router-dom";
 
 const FooterPage = () => {
   const [email, setEmail] = useState(false);
@@ -60,16 +61,16 @@ const FooterPage = () => {
             <h5 className="title">Links</h5>
             <ul>
               <li className="list-unstyled">
-                <a href="#!">Link 1</a>
+                <Link to="#!">Link 1  </Link>
               </li>
               <li className="list-unstyled">
-                <a href="#!">Link 2</a>
+                <Link to="#!">Link 2 </Link>
               </li>
               <li className="list-unstyled">
-                <a href="#!">Link 3</a>
+                <Link to="#!">Link 3 </Link>
               </li>
               <li className="list-unstyled">
-                <a href="#!">Link 4</a>
+                <Link to="#!">Link 4 </Link>
               </li>
             </ul>
           </MDBCol>

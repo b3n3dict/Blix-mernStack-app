@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 // import Product from "../components/Product";
 import { listProducts } from "../actions/productActions";
 // import Loader from "../components/Loader";
@@ -16,13 +16,22 @@ import TV from "../img/tv-trans.png";
 import PS from "../img/ps5-trans.png";
 import Fashion from "../img/fashion.png";
 import { LinkContainer } from "react-router-bootstrap";
-
+import Paginate from "../components/Paginate";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import HomePage from "../components/HomePage";
+import Loader from "../components/Loader";
+import Message from "../components/Message";
+import Product from "../components/Product";
+import { Col, Row } from "react-bootstrap";
 
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword;
+  const pageNumber = match.params.pageNumber || 1;
+
+  const productList = useSelector((state) => state.productList);
+  const { loading, error, products, page, pages } = productList;
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -49,8 +58,8 @@ const HomeScreen = ({ match }) => {
   }, []);
 
   useEffect(() => {
-    dispatch(listProducts(keyword));
-  }, [dispatch, keyword]);
+    dispatch(listProducts(keyword, pageNumber));
+  }, [dispatch, keyword, pageNumber]);
 
   return (
     <div className="">
@@ -198,24 +207,31 @@ const HomeScreen = ({ match }) => {
           </div>
         </div>
       </div>
-      <ProductList title="Latest Products" />
+      {/* <ProductList title="Latest Products" /> */}
       {/* <ProductList title="New Trends" /> */}
       {/* <Slider /> */}
       <ProductList title="Your Recommendations" />
-      {/* <h1>Latest Products</h1>
+      <h3 className="ml-5 productList__header">Latest Products</h3>
       {loading ? (
         <Loader />
       ) : error ? (
         <Message severity="error">{error}</Message>
       ) : (
-        <Row>
-          {products.map((product) => (
-            <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
-              <Product product={product} />
-            </Col>
-          ))}
-        </Row>
-      )} */}
+        <>
+          <Row className="mx-5">
+            {products.map((product) => (
+              <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+                <Product product={product} />
+              </Col>
+            ))}
+          </Row>
+          <Paginate
+            pages={pages}
+            page={page}
+            keyword={keyword ? keyword : ""}
+          />
+        </>
+      )}
     </div>
   );
 };
