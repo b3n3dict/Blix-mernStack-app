@@ -11,10 +11,10 @@ import CategoryItem from "../components/CategoryItem";
 import { Link } from "react-router-dom";
 import ProductList from "../components/ProductList";
 // import { Container } from "react-bootstrap";
-import Camera from "../img/cam-trans.png";
-import Mac from "../img/mac-trans.png";
-import PS from "../img/ps-trans.png";
-// import Controller from "../img/controller-trans.png";
+import TV from "../img/tv-trans.png";
+// import Mac from "../img/mac-trans.png";
+import PS from "../img/ps5-trans.png";
+import Fashion from "../img/fashion.png";
 import { LinkContainer } from "react-router-bootstrap";
 
 import Aos from "aos";
@@ -113,64 +113,7 @@ const HomeScreen = ({ match }) => {
           </div>
         </div>
       </div> */}
-      <div className="px-5">
-        <div className="display__item row" data-aos="fade-right">
-          <div className="display__item-desc col-md-6">
-            <LinkContainer
-              to="/product/600be827cabbed2f002d5225"
-              style={{ cursor: "pointer" }}
-            >
-              <h5>
-                Apple MacBook Pro (16-inch, 16GB RAM, 1TB Storage, 2.3GHz 9th
-                Gen Intel Core i9) - Space Grey
-              </h5>
-            </LinkContainer>
-            <br />
-            <p>
-              Ninth-generation 8-core Intel Core i9 processor Stunning 16-inch
-              Retina display with True Tone technology Touch Bar and Touch ID
-              AMD Radeon Pro 5500M graphics with GDDR6 memory Ultrafast SSD
-            </p>
-          </div>
-          <div className="col-md-6 display__item-img">
-            <LinkContainer
-              to="/product/600be827cabbed2f002d5225"
-              style={{ cursor: "pointer" }}
-            >
-              <img src={Mac} alt="" />
-            </LinkContainer>
-          </div>
-        </div>
-      </div>
-      <div className="px-5">
-        <div className="display__item row ml-2" data-aos="zoom-in-left">
-          <div className="col-md-6 display__item-img ">
-            <LinkContainer
-              to="/product/600bedc2baba0b4804ca72df"
-              style={{ cursor: "pointer" }}
-            >
-              <img src={Camera} alt="" />
-            </LinkContainer>
-          </div>
-          <div className="display__item-desc col-md-6">
-            <LinkContainer
-              to="/product/600bedc2baba0b4804ca72df"
-              style={{ cursor: "pointer" }}
-            >
-              <h5>Sony Alpha ILCE-7M3K Full-Frame 24.2MP</h5>
-            </LinkContainer>
-            <br />
-            <p>
-              Mirrorless Camera with 28-70mm Zoom Lens (4K Full Frame, Real-Time
-              Eye Auto Focus, Tiltable LCD, Low Light Camera) - Black. Standard
-              ISO range from 100 to 51200 15-stop dynamic range at
-              low-sensitivity settings 14-bit RAW output for natural gradations
-              5-axis optical in-body image stabilization 4D Focus – Wide, Fast,
-              Steadfast, AF performance inherited from α9
-            </p>
-          </div>
-        </div>
-      </div>
+
       <div className="px-5">
         <div className=" display__item row" data-aos="fade-right">
           <div className="display__item-desc col-md-6">
@@ -178,19 +121,16 @@ const HomeScreen = ({ match }) => {
               to="/product/600c0aa0a8e8774f6c6652e1"
               style={{ cursor: "pointer" }}
             >
-              <h5>
-                Sony PS4 1TB Slim Console with Additional Dualshock Controller
-                (Black)
-              </h5>
+              <h5>Sony PS5 1TB Slim Console with Additional Dualshock</h5>
             </LinkContainer>
 
             <br />
             <p>
-              A Stunning New Design: A slimmer and lighter console with stylish
-              new looks and packed with true PlayStation 4 power Slick
-              Interface: Fast, personal and easier to share, connect and play
-              with friends Experience incredibly vivid, vibrant colours with
-              breath-taking HDR visuals
+              Lightning speed Harness the power of a custom CPU, GPU and SSD
+              with Integrated I/O that rewrite the rules of what a PlayStation
+              console can do.The custom integration of the PS5 console's systems
+              lets creators pull data from the SSD so quickly that they can
+              design games in ways never before possible.
             </p>
           </div>
           <div className="col-md-6 display__item-img">
@@ -199,6 +139,61 @@ const HomeScreen = ({ match }) => {
               style={{ cursor: "pointer" }}
             >
               <img src={PS} alt="" />
+            </LinkContainer>
+          </div>
+        </div>
+        <div className="px-5">
+          <div className="display__item row ml-2" data-aos="zoom-in-left">
+            <div className="col-md-6 display__item-img ">
+              <LinkContainer
+                to="/product/600bedc2baba0b4804ca72df"
+                style={{ cursor: "pointer" }}
+              >
+                <img src={TV} alt="" />
+              </LinkContainer>
+            </div>
+            <div className="display__item-desc col-md-6">
+              <LinkContainer
+                to="/product/600bedc2baba0b4804ca72df"
+                style={{ cursor: "pointer" }}
+              >
+                <h5>
+                  OnePlus Y Series 80 cm (32 inches) HD Ready LED Smart Android
+                  TV 32Y1 (Black)
+                </h5>
+              </LinkContainer>
+              <br />
+              <p>
+                Resolution: HD Ready (1366x768) | Refresh Rate: 60 hertz
+                Connectivity: 2 HDMI ports to connect set top box, Blu Ray
+                players, gaming console | 2 USB ports to connect hard drives and
+                other USB devices Sound : 20 Watts Output | Dolby Audio
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="display__item row" data-aos="fade-right">
+          <div className="display__item-desc col-md-6">
+            <LinkContainer
+              to="/product/600be827cabbed2f002d5225"
+              style={{ cursor: "pointer" }}
+            >
+              <h5>ILLI LONDON Women's Top</h5>
+            </LinkContainer>
+            <br />
+            <p>
+              Women's Casual and Comfortable Half Sleeve Solid Collared Boxy
+              Fit.Care Instructions: hand wash Fit Type: regular_fit 100% Rayon
+              hand wash Crop Top <br />
+              Fit Type: Slim Fit <br /> Sleeve: Half Sleeve <br /> Color:Black{" "}
+            </p>
+          </div>
+          <div className="col-md-6 display__item-img">
+            <LinkContainer
+              to="/product/600be827cabbed2f002d5225"
+              style={{ cursor: "pointer" }}
+            >
+              <img src={Fashion} alt="" />
             </LinkContainer>
           </div>
         </div>
