@@ -7,7 +7,7 @@ import { listProducts } from "../../actions/productActions";
 import Loader from "../Loader";
 import Message from "../Message";
 
-const Electronics = () => {
+const Sports = () => {
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
   const dispatch = useDispatch();
@@ -21,7 +21,8 @@ const Electronics = () => {
       <Link className="btn btn-light my-3 ml-3 btn__right" to="/">
         Go Back
       </Link>
-      <h1 className="mx-5">Electronics</h1>
+
+      <h1 className="mx-5">Sports</h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -29,7 +30,7 @@ const Electronics = () => {
       ) : (
         <Row className="mx-5">
           {products
-            .filter((product) => product.category === "Electronics")
+            .filter((product) => product.category === "Sports")
             .map((item) => (
               <Col key={item._id} sm={12} md={6} lg={4} xl={3}>
                 <Product product={item} />
@@ -41,4 +42,4 @@ const Electronics = () => {
   );
 };
 
-export default Electronics;
+export default Sports;

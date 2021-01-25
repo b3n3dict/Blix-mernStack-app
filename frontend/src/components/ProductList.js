@@ -9,6 +9,8 @@ import Loader from "./Loader";
 const SubHomeScreen = ({ title }) => {
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
+  const sliceProducts = products.slice(2, 11);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -25,7 +27,7 @@ const SubHomeScreen = ({ title }) => {
           <Message severity="error">{error}</Message>
         ) : (
           <div className="productList__products">
-            {products.map((product) => (
+            {sliceProducts.map((product) => (
               <div key={product._id}>
                 <Product className="productList__product" product={product} />
               </div>

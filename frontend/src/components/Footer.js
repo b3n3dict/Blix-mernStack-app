@@ -41,7 +41,7 @@ const FooterPage = () => {
             </p>
           </MDBCol>
           <MDBCol md="3">
-            <div class="input-group">
+            <div className="input-group">
               <form style={{ display: "flex" }} onSubmit={emailSubmit}>
                 <input
                   type="email"
@@ -61,7 +61,7 @@ const FooterPage = () => {
             <h5 className="title">Links</h5>
             <ul>
               <li className="list-unstyled">
-                <Link to="#!">Link 1  </Link>
+                <Link to="#!">Link 1 </Link>
               </li>
               <li className="list-unstyled">
                 <Link to="#!">Link 2 </Link>

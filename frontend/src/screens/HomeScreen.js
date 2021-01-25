@@ -66,9 +66,9 @@ const HomeScreen = ({ match }) => {
       <HomePage />
       {/* <Slider /> */}
       <div className="categoryItem__container mt-3">
-        <Link to="/computer-accessories">
+        <Link to="/trending-now">
           <CategoryItem
-            title="Computer & Accessories"
+            title="Trending Now"
             image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_PC_1x._SY304_CB431800965_.jpg"
           />
         </Link>
@@ -79,9 +79,9 @@ const HomeScreen = ({ match }) => {
           />
         </Link>
 
-        <Link to="/electronics">
+        <Link to="/offers">
           <CategoryItem
-            title="Electronics"
+            title="Upto 50% off"
             image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
           />
         </Link>
@@ -225,11 +225,13 @@ const HomeScreen = ({ match }) => {
               </Col>
             ))}
           </Row>
-          <Paginate
-            pages={pages}
-            page={page}
-            keyword={keyword ? keyword : ""}
-          />
+          <div className="pagination__container container px-5 mx-5">
+            <Paginate
+              pages={pages}
+              page={page}
+              keyword={keyword ? keyword : ""}
+            />
+          </div>
         </>
       )}
     </div>

@@ -210,12 +210,12 @@ label {
 } */
 
 .neu__footer {
-  font-family: 'Montserrat', sans-serif;
-  color:  #ebecf0;;
+  font-family: "Montserrat", sans-serif;
+  color: #ebecf0;
   font-weight: bold;
   box-shadow: 4px 4px 20px rgb(77, 75, 75), 5px 5px 20px #3f3d3d;
   transition: all 0.2s ease-in-out;
- 
+
   font-weight: 600;
 
   width: 100%;
@@ -232,7 +232,7 @@ label {
   border-radius: 7px;
   /* margin: 10px; */
   /* padding: 16px; */
-  background-color:#272727;
+  background-color: #272727;
   /* text-shadow: 1px 1px 0 #fff; */
 }
 
@@ -245,6 +245,20 @@ label {
 .neu__footer:focus {
   outline: none;
 }
-.mdRow{
-  padding:0 10px;
+.mdRow {
+  padding: 0 10px;
+}
+
+.btn__right {
+  float: right;
+  text-align: center;
+  align-items: center;
+  margin: 45px;
+  height: 40px;
+}
+.pagination__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
