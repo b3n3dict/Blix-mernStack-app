@@ -72,7 +72,7 @@ const HomePage = () => {
             src={Camera}
             onMouseOver={() => {
               imgSlider(Camera);
-              circleColorChange("#6C6C6C");
+              circleColorChange("#2176bd");
             }}
             alt=""
           />
@@ -82,7 +82,7 @@ const HomePage = () => {
             src={Mac}
             onMouseOver={() => {
               imgSlider(Mac);
-              circleColorChange("#2176bd");
+              circleColorChange("#6C6C6C");
             }}
             alt=""
           />
