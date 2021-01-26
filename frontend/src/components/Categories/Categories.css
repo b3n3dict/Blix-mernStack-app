@@ -26,6 +26,7 @@
 
 .categoriesLogo {
   width: 80px;
+  min-height: 40px;
 }
 .categories {
   display: flex;

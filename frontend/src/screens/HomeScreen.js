@@ -4,32 +4,33 @@ import { useDispatch, useSelector } from "react-redux";
 // import Product from "../components/Product";
 import { listProducts } from "../actions/productActions";
 // import Loader from "../components/Loader";
-import Slider from "../components/Slider";
+// import Slider from "../components/Slider";
 // import Message from "../components/Message";
 import Categories from "../components/Categories/Categories";
 import CategoryItem from "../components/CategoryItem";
 import { Link } from "react-router-dom";
 import ProductList from "../components/ProductList";
-import { Col, Container, Row } from "react-bootstrap";
-import Camera from "../img/cam-trans.png";
-import Mac from "../img/mac-trans.png";
-import PS from "../img/ps-trans.png";
-import Controller from "../img/controller-trans.png";
+// import { Container } from "react-bootstrap";
+import TV from "../img/tv-trans.png";
+// import Mac from "../img/mac-trans.png";
+import PS from "../img/ps5-trans.png";
+import Fashion from "../img/fashion.png";
 import { LinkContainer } from "react-router-bootstrap";
-import Paginate from '../components/Paginate'
+import Paginate from "../components/Paginate";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import HomePage from "../components/HomePage";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 import Product from "../components/Product";
+import { Col, Row } from "react-bootstrap";
 
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword;
-  const pageNumber = match.params.pageNumber || 1
-  
+  const pageNumber = match.params.pageNumber || 1;
+
   const productList = useSelector((state) => state.productList);
-  const { loading, error, products,page,pages } = productList;
+  const { loading, error, products, page, pages } = productList;
 
   const dispatch = useDispatch();
 
@@ -57,17 +58,17 @@ const HomeScreen = ({ match }) => {
   }, []);
 
   useEffect(() => {
-    dispatch(listProducts(keyword,pageNumber));
-  }, [dispatch, keyword,pageNumber]);
+    dispatch(listProducts(keyword, pageNumber));
+  }, [dispatch, keyword, pageNumber]);
 
   return (
     <div className="">
-      <HomePage className="mb-5" /> <br />
+      <HomePage />
       {/* <Slider /> */}
-      <div className="categoryItem__container mt-4 pt-5">
-        <Link to="/computer-accessories">
+      <div className="categoryItem__container mt-3">
+        <Link to="/trending-now">
           <CategoryItem
-            title="Computer & Accessories"
+            title="Trending Now"
             image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_PC_1x._SY304_CB431800965_.jpg"
           />
         </Link>
@@ -78,9 +79,9 @@ const HomeScreen = ({ match }) => {
           />
         </Link>
 
-        <Link to="/electronics">
+        <Link to="/offers">
           <CategoryItem
-            title="Electronics"
+            title="Upto 50% off"
             image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
           />
         </Link>
@@ -121,64 +122,7 @@ const HomeScreen = ({ match }) => {
           </div>
         </div>
       </div> */}
-      <div className="px-5">
-        <div className="display__item row" data-aos="fade-right">
-          <div className="display__item-desc col-md-6">
-            <LinkContainer
-              to="/product/600be827cabbed2f002d5225"
-              style={{ cursor: "pointer" }}
-            >
-              <h5>
-                Apple MacBook Pro (16-inch, 16GB RAM, 1TB Storage, 2.3GHz 9th
-                Gen Intel Core i9) - Space Grey
-              </h5>
-            </LinkContainer>
-            <br />
-            <p>
-              Ninth-generation 8-core Intel Core i9 processor Stunning 16-inch
-              Retina display with True Tone technology Touch Bar and Touch ID
-              AMD Radeon Pro 5500M graphics with GDDR6 memory Ultrafast SSD
-            </p>
-          </div>
-          <div className="col-md-6 display__item-img">
-            <LinkContainer
-              to="/product/600be827cabbed2f002d5225"
-              style={{ cursor: "pointer" }}
-            >
-              <img src={Mac} alt="" />
-            </LinkContainer>
-          </div>
-        </div>
-      </div>
-      <div className="px-5">
-        <div className="display__item row ml-2" data-aos="zoom-in-left">
-          <div className="col-md-6 display__item-img ">
-            <LinkContainer
-              to="/product/600bedc2baba0b4804ca72df"
-              style={{ cursor: "pointer" }}
-            >
-              <img src={Camera} alt="" />
-            </LinkContainer>
-          </div>
-          <div className="display__item-desc col-md-6">
-            <LinkContainer
-              to="/product/600bedc2baba0b4804ca72df"
-              style={{ cursor: "pointer" }}
-            >
-              <h5>Sony Alpha ILCE-7M3K Full-Frame 24.2MP</h5>
-            </LinkContainer>
-            <br />
-            <p>
-              Mirrorless Camera with 28-70mm Zoom Lens (4K Full Frame, Real-Time
-              Eye Auto Focus, Tiltable LCD, Low Light Camera) - Black. Standard
-              ISO range from 100 to 51200 15-stop dynamic range at
-              low-sensitivity settings 14-bit RAW output for natural gradations
-              5-axis optical in-body image stabilization 4D Focus – Wide, Fast,
-              Steadfast, AF performance inherited from α9
-            </p>
-          </div>
-        </div>
-      </div>
+
       <div className="px-5">
         <div className=" display__item row" data-aos="fade-right">
           <div className="display__item-desc col-md-6">
@@ -186,19 +130,16 @@ const HomeScreen = ({ match }) => {
               to="/product/600c0aa0a8e8774f6c6652e1"
               style={{ cursor: "pointer" }}
             >
-              <h5>
-                Sony PS4 1TB Slim Console with Additional Dualshock Controller
-                (Black)
-              </h5>
+              <h5>Sony PS5 1TB Slim Console with Additional Dualshock</h5>
             </LinkContainer>
 
             <br />
             <p>
-              A Stunning New Design: A slimmer and lighter console with stylish
-              new looks and packed with true PlayStation 4 power Slick
-              Interface: Fast, personal and easier to share, connect and play
-              with friends Experience incredibly vivid, vibrant colours with
-              breath-taking HDR visuals
+              Lightning speed Harness the power of a custom CPU, GPU and SSD
+              with Integrated I/O that rewrite the rules of what a PlayStation
+              console can do.The custom integration of the PS5 console's systems
+              lets creators pull data from the SSD so quickly that they can
+              design games in ways never before possible.
             </p>
           </div>
           <div className="col-md-6 display__item-img">
@@ -206,7 +147,62 @@ const HomeScreen = ({ match }) => {
               to="/product/600c0aa0a8e8774f6c6652e1"
               style={{ cursor: "pointer" }}
             >
-              <img src={Controller} alt="" />
+              <img src={PS} alt="" />
+            </LinkContainer>
+          </div>
+        </div>
+        <div className="px-5">
+          <div className="display__item row ml-2" data-aos="zoom-in-left">
+            <div className="col-md-6 display__item-img ">
+              <LinkContainer
+                to="/product/600bedc2baba0b4804ca72df"
+                style={{ cursor: "pointer" }}
+              >
+                <img src={TV} alt="" />
+              </LinkContainer>
+            </div>
+            <div className="display__item-desc col-md-6">
+              <LinkContainer
+                to="/product/600bedc2baba0b4804ca72df"
+                style={{ cursor: "pointer" }}
+              >
+                <h5>
+                  OnePlus Y Series 80 cm (32 inches) HD Ready LED Smart Android
+                  TV 32Y1 (Black)
+                </h5>
+              </LinkContainer>
+              <br />
+              <p>
+                Resolution: HD Ready (1366x768) | Refresh Rate: 60 hertz
+                Connectivity: 2 HDMI ports to connect set top box, Blu Ray
+                players, gaming console | 2 USB ports to connect hard drives and
+                other USB devices Sound : 20 Watts Output | Dolby Audio
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="display__item row" data-aos="fade-right">
+          <div className="display__item-desc col-md-6">
+            <LinkContainer
+              to="/product/600be827cabbed2f002d5225"
+              style={{ cursor: "pointer" }}
+            >
+              <h5>ILLI LONDON Women's Top</h5>
+            </LinkContainer>
+            <br />
+            <p>
+              Women's Casual and Comfortable Half Sleeve Solid Collared Boxy
+              Fit.Care Instructions: hand wash Fit Type: regular_fit 100% Rayon
+              hand wash Crop Top <br />
+              Fit Type: Slim Fit <br /> Sleeve: Half Sleeve <br /> Color:Black{" "}
+            </p>
+          </div>
+          <div className="col-md-6 display__item-img">
+            <LinkContainer
+              to="/product/600be827cabbed2f002d5225"
+              style={{ cursor: "pointer" }}
+            >
+              <img src={Fashion} alt="" />
             </LinkContainer>
           </div>
         </div>
@@ -215,21 +211,27 @@ const HomeScreen = ({ match }) => {
       {/* <ProductList title="New Trends" /> */}
       {/* <Slider /> */}
       <ProductList title="Your Recommendations" />
-      <h1>Latest Products</h1>
+      <h3 className="ml-5 productList__header">Latest Products</h3>
       {loading ? (
         <Loader />
       ) : error ? (
         <Message severity="error">{error}</Message>
       ) : (
         <>
-        <Row>
-          {products.map((product) => (
-            <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
-              <Product product={product} />
-            </Col>
-          ))}
-        </Row>
-        <Paginate pages={pages} page={page} keyword={keyword ? keyword : ''}/>
+          <Row className="mx-5">
+            {products.map((product) => (
+              <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+                <Product product={product} />
+              </Col>
+            ))}
+          </Row>
+          <div className="pagination__container container px-5 mx-5">
+            <Paginate
+              pages={pages}
+              page={page}
+              keyword={keyword ? keyword : ""}
+            />
+          </div>
         </>
       )}
     </div>
