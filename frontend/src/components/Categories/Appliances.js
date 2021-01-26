@@ -7,14 +7,19 @@ import { listProducts } from "../../actions/productActions";
 import Loader from "../Loader";
 import Message from "../Message";
 
-const Appliances = () => {
+
+const Appliances = ({match}) => {
+  const keyword = match.params.keyword;
+  const pageNumber = match.params.pageNumber || 1;
+  const all = 1;
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
+    dispatch(listProducts(keyword,pageNumber,all));
+    
+  }, [dispatch,keyword,all]);
 
   return (
     <>
@@ -28,12 +33,15 @@ const Appliances = () => {
         <Message severity="error">{error}</Message>
       ) : (
         <Row className="mx-5">
+
           {products
             .filter((product) => product.category === "Appliances")
             .map((item) => (
+               
               <Col key={item._id} sm={12} md={6} lg={4} xl={3}>
                 <Product product={item} />
               </Col>
+              
             ))}
         </Row>
       )}

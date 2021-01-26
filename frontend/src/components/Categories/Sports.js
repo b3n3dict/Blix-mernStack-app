@@ -7,13 +7,16 @@ import { listProducts } from "../../actions/productActions";
 import Loader from "../Loader";
 import Message from "../Message";
 
-const Sports = () => {
+const Sports = ({match}) => {
+  const keyword = match.params.keyword;
+  const pageNumber = match.params.pageNumber || 1;
+  const all = 1;
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(listProducts());
+    dispatch(listProducts(keyword,pageNumber,all));
   }, [dispatch]);
 
   return (

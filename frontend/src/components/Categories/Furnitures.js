@@ -7,14 +7,16 @@ import { listProducts } from "../../actions/productActions";
 import Loader from "../Loader";
 import Message from "../Message";
 
-const Furnitures = () => {
+const Furnitures = ({match}) => {
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
   const dispatch = useDispatch();
-
+  const keyword = match.params.keyword;
+  const pageNumber = match.params.pageNumber || 1;
+  const all = 1;
   useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
+    dispatch(listProducts(keyword,pageNumber,all));
+  }, [dispatch,keyword,pageNumber,all]);
 
   return (
     <>

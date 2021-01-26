@@ -28,7 +28,6 @@ import { Col, Row } from "react-bootstrap";
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword;
   const pageNumber = match.params.pageNumber || 1;
-
   const productList = useSelector((state) => state.productList);
   const { loading, error, products, page, pages } = productList;
 

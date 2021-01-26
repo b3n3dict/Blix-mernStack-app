@@ -8,7 +8,6 @@ import Loader from "../components/Loader";
 import Paginate from '../components/Paginate'
 const SearchScreen = ({ match }) => {
   const keyword = match.params.keyword;
- 
   const pageNumber = match.params.pageNumber || 1
   
   const productList = useSelector((state) => state.productList);
