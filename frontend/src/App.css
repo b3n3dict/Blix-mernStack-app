@@ -212,11 +212,11 @@ label {
 .neu__footer {
   font-family: "Montserrat", sans-serif;
   color: #ebecf0;
-  font-weight: bold;
+
   box-shadow: 4px 4px 20px rgb(77, 75, 75), 5px 5px 20px #3f3d3d;
   transition: all 0.2s ease-in-out;
 
-  font-weight: 600;
+
 
   width: 100%;
 
@@ -225,11 +225,11 @@ label {
   /* justify-content: center;
   align-items: center; */
   margin: 0 16px/2;
-  font-size: 16px * 1.2;
+ 
   border: 0;
-  outline: 0;
-  font-size: 16px;
-  border-radius: 7px;
+  border-top-right-radius: 11px;
+  border-top-left-radius: 11px;
+  /* border-radius: 7px; */
   /* margin: 10px; */
   /* padding: 16px; */
   background-color: #272727;

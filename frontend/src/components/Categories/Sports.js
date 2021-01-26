@@ -17,7 +17,7 @@ const Sports = ({match}) => {
 
   useEffect(() => {
     dispatch(listProducts(keyword,pageNumber,all));
-  }, [dispatch]);
+  }, [dispatch,keyword,pageNumber,all]);
 
   return (
     <>

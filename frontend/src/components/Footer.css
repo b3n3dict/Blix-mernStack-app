@@ -4,6 +4,7 @@
   margin: 0 !important;
   margin-right: 0 !important;
   margin-left: 0 !important;
+  padding-left: 20px;
 }
 .inFt, .ftb {
   border: 0;
@@ -77,6 +78,8 @@ label {
     color: #5372fe;
     margin-right: 0; 
   }
+ 
+  
   .socialLink{
     margin-top: 20px;
     margin-left: 10px;
@@ -88,3 +91,21 @@ label {
   .socialLink ul li{
     padding: 10px;
   }
+h5.fTitle{
+  color:"#707070";
+}
+.fTitle:hover{
+  color: "#D8D8D8";
+}
+.footerList ul li{
+  padding: 6px 0;
+  font-style: bold;
+  font-size: 20px;
+  
+}
+.footerList ul li a{
+  color:#ffff;
+}
+.footerList ul li a:hover{
+  color:rgb(176, 217, 255);
+}
