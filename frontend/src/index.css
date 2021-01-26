@@ -173,3 +173,6 @@ input:focus {
   font-size: 32px;
   font-weight: semibold;
 }
+.Btn-Blue-BG.active {
+  background-color: blue !important;
+}
