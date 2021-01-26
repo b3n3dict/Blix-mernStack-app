@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import "./Footer.css";
 import SendIcon from "@material-ui/icons/Send";
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import Message from "./Message";
 import { Link } from "react-router-dom";
 
@@ -40,8 +44,15 @@ const FooterPage = () => {
               content.
             </p>
           </MDBCol>
-          <MDBCol md="3">
-            <div className="input-group">
+          <MDBCol md="2">
+          <h5 className="title">Footer Content</h5>
+            <p>
+              Here you can use rows and columns here to organize your footer
+              content.
+            </p>
+          </MDBCol>
+          <MDBCol md="4" >
+          <div className="input-group">
               <form style={{ display: "flex" }} onSubmit={emailSubmit}>
                 <input
                   type="email"
@@ -56,23 +67,22 @@ const FooterPage = () => {
                 </button>
               </form>
             </div>
-          </MDBCol>
-          <MDBCol md="3">
-            <h5 className="title">Links</h5>
+            <div className="socialLink">
             <ul>
               <li className="list-unstyled">
-                <Link to="#!">Link 1 </Link>
+                <Link to="#!"><InstagramIcon fontSize="large"/></Link>
               </li>
               <li className="list-unstyled">
-                <Link to="#!">Link 2 </Link>
+                <Link to="#!"><FacebookIcon fontSize="large"/> </Link>
               </li>
               <li className="list-unstyled">
-                <Link to="#!">Link 3 </Link>
+                <Link to="#!"><TwitterIcon fontSize="large"/></Link>
               </li>
               <li className="list-unstyled">
-                <Link to="#!">Link 4 </Link>
+                <Link to="#!"><WhatsAppIcon fontSize="large"/> </Link>
               </li>
             </ul>
+            </div>
           </MDBCol>
         </MDBRow>
       </MDBContainer>

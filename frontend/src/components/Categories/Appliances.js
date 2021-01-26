@@ -19,7 +19,7 @@ const Appliances = ({match}) => {
   useEffect(() => {
     dispatch(listProducts(keyword,pageNumber,all));
     
-  }, [dispatch,keyword,all]);
+  }, [dispatch,keyword,pageNumber,all]);
 
   return (
     <>

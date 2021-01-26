@@ -9,7 +9,7 @@
   border: 0;
   outline: 0;
   font-size: 16px;
-  border-radius:16px*20;
+  border-radius:150px !important;
   padding: 16px;
   background-color:#272727;
   text-shadow: 1px 1px 0 #212121;
@@ -76,4 +76,15 @@ label {
   .icon {
     color: #5372fe;
     margin-right: 0; 
+  }
+  .socialLink{
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .socialLink ul{
+    display: flex;
+    flex-direction: row;
+  }
+  .socialLink ul li{
+    padding: 10px;
   }

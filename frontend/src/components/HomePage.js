@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./HomePage.css";
+import {LinkContainer} from 'react-router-bootstrap'
 import Camera from "../img/cam-trans.png";
 import Mac from "../img/mac-trans.png";
 import Controller from "../img/controller-trans.png";
@@ -35,7 +36,7 @@ const HomePage = () => {
   }, []);
 
   const [image, setImage] = useState(Mac);
-  const [circleColor, setCircleColor] = useState("#017143");
+  const [circleColor, setCircleColor] = useState("#2176bd");
   const imgSlider = (imageUrl) => {
     setImage(imageUrl);
   };
@@ -68,6 +69,7 @@ const HomePage = () => {
       </div>
       <ul className="thumb" id="thumbImg">
         <li>
+        <LinkContainer to='/product/600bedc2baba0b4804ca72df'>
           <img
             src={Camera}
             onMouseOver={() => {
@@ -76,18 +78,24 @@ const HomePage = () => {
             }}
             alt=""
           />
+          </LinkContainer>
         </li>
         <li>
+        <LinkContainer to='/product/600be827cabbed2f002d5225'>
+
           <img
             src={Mac}
             onMouseOver={() => {
               imgSlider(Mac);
-              circleColorChange("#2176bd");
+              circleColorChange("#23689b");
             }}
             alt=""
           />
+          </LinkContainer>
         </li>
         <li className="mob__res">
+        <LinkContainer to='/product/600c0aa0a8e8774f6c6652e1'>
+
           <img
             src={Controller}
             onMouseOver={() => {
@@ -96,8 +104,10 @@ const HomePage = () => {
             }}
             alt=""
           />
+          </LinkContainer>
         </li>
         <li id="mob__res4">
+        <LinkContainer to='/product/5fd3452e49721054ac0e5ca6'>
           <img
             src={Iphone11}
             onMouseOver={() => {
@@ -106,6 +116,7 @@ const HomePage = () => {
             }}
             alt=""
           />
+          </LinkContainer>
         </li>{" "}
         <li id="mob__res1">
           <img
