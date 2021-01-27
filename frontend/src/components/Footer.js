@@ -89,7 +89,7 @@ const FooterPage = () => {
           </MDBCol>
           <MDBCol md="4" className="lastDiv" >
           <div className="input-group">
-              <h5 style={{textAlign:"center",paddingLeft:"50px"}}>Stay In Touch</h5>
+              <h5 style={{textAlign:"center",paddingLeft:"60px"}}>Stay In Touch</h5>
               <form style={{ display: "flex",paddingTop:"27px" }} onSubmit={emailSubmit}>
                 <input
                   type="email"

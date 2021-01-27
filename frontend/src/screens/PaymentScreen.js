@@ -4,9 +4,11 @@ import { Form, Button, Col } from "react-bootstrap";
 import FormContainer from "../components/FormContainer";
 import { savePaymentMethod } from "../actions/cartActions";
 import CheckoutSteps from "../components/CheckoutSteps";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Radio from "@material-ui/core/Radio";
-
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
 const PaymentScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
@@ -19,6 +21,7 @@ const PaymentScreen = ({ history }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(savePaymentMethod(paymentMethod));
+    
     history.push("/placeorder");
   };
   return (
@@ -29,31 +32,17 @@ const PaymentScreen = ({ history }) => {
         <Form.Group>
           <Form.Label as="legend">Select Method</Form.Label>
           <Col>
-            {/* <Form.Check
-              type="radio"
-              label="Paypal or Credit Card"
-              id="PayPal"
-              name="paymentMethod"
-              value="PayPal"
-              checked
-               className="Btn-Blue-BG"
-              onChange={(e) => setPaymentMethod(e.target.value)}
-            ></Form.Check> */}
-                
-            <FormControlLabel
-              control={<Radio color="primary" />}
-              label="Paypal or Credit Card"
-              id="PayPal"
-              name="paymentMethod"
-              value="PayPal"
-              checked
-              onChange={(e) => setPaymentMethod(e.target.value)}
-            />
-
-            {/* <Form.Check type="radio" label="Stripe" id="Stripe"
-                 name="paymentMethod" value='Stripe' 
-                 onChange={(e)=> setPaymentMethod(e.target.value)}>
-                </Form.Check> */}
+          <FormControl component="fieldset">
+  <FormLabel component="legend">Type</FormLabel>
+  <RadioGroup aria-label="gender" name="gender1" value={paymentMethod} onChange={(e)=>{
+    setPaymentMethod(e.target.value)
+  }}>
+    <FormControlLabel value="PayPal" control={<Radio />} label="PayPal or Credit Card" id="PayPal"  name="paymentMethod" />
+    <FormControlLabel value="COD" control={<Radio />}  label="Cash On Delivery" id="COD"/>
+    {/* <FormControlLabel value="other" control={<Radio />} label="Other" />
+    <FormControlLabel value="disabled" disabled control={<Radio />} label="(Disabled option)" /> */}
+  </RadioGroup>
+</FormControl>
           </Col>
         </Form.Group>
         <Button type="submit" variant="primary">
