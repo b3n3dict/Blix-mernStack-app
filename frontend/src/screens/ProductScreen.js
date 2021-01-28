@@ -78,7 +78,7 @@ const ProductScreen = ({ history, match }) => {
               />
             </Col>
             <Col md={3}>
-              <ListGroup variant="flush">
+              <ListGroup variant="flush" style={{ borderRadius: "15px" }}>
                 <ListGroup.Item>
                   <h3>{product.name}</h3>
                 </ListGroup.Item>
@@ -95,8 +95,8 @@ const ProductScreen = ({ history, match }) => {
               </ListGroup>
             </Col>
             <Col md={3}>
-              <Card>
-                <ListGroup variant="flush">
+              <Card className="product__card">
+                <ListGroup variant="flush" className="product__card">
                   <ListGroup.Item>
                     <Row>
                       <Col>Price :</Col>
@@ -156,7 +156,7 @@ const ProductScreen = ({ history, match }) => {
             <Col md={6}>
               <h2>Reviews</h2>
               {product.reviews.length === 0 && <Message>No Reviews</Message>}
-              <ListGroup varient="flush">
+              <ListGroup varient="flush" className="product__card">
                 {product.reviews.map((review) => (
                   <ListGroup.Item key={review._id}>
                     <strong>{review.name}</strong>
