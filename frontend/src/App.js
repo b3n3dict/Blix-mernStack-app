@@ -22,7 +22,7 @@ import ProductEditScreen from "./screens/ProductEditScreen";
 import OrderListScreen from "./screens/OrderListScreen";
 import SearchScreen from "./screens/SearchScreen";
 import "./App.css";
-import Appliances from "./components/Categories/Appliences";
+import Appliances from './components/Categories/Appliances'
 import Fashion from "./components/Categories/Fashion";
 import Sports from "./components/Categories/Sports";
 import Furnitures from "./components/Categories/Furnitures";

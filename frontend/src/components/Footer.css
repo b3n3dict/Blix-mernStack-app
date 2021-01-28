@@ -4,12 +4,13 @@
   margin: 0 !important;
   margin-right: 0 !important;
   margin-left: 0 !important;
+  padding-left: 20px;
 }
 .inFt, .ftb {
   border: 0;
   outline: 0;
   font-size: 16px;
-  border-radius:16px*20;
+  border-radius:150px !important;
   padding: 16px;
   background-color:#272727;
   text-shadow: 1px 1px 0 #212121;
@@ -77,3 +78,34 @@ label {
     color: #5372fe;
     margin-right: 0; 
   }
+ 
+  
+  .socialLink{
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .socialLink ul{
+    display: flex;
+    flex-direction: row;
+  }
+  .socialLink ul li{
+    padding: 10px;
+  }
+h5.fTitle{
+  color:"#707070";
+}
+.fTitle:hover{
+  color: "#D8D8D8";
+}
+.footerList ul li{
+  padding: 6px 0;
+  font-style: bold;
+  font-size: 20px;
+  
+}
+.footerList ul li a{
+  color:#ffff;
+}
+.footerList ul li a:hover{
+  color:rgb(176, 217, 255);
+}

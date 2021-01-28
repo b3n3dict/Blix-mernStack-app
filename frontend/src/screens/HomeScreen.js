@@ -24,11 +24,14 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import Product from "../components/Product";
 import { Col, Row } from "react-bootstrap";
+import Basics from "../img/basics.jpg";
+import holiday from "../img/holiday.jpg";
+import offer from "../img/offer.jpg";
+import trending from "../img/trending.jpg";
 
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword;
   const pageNumber = match.params.pageNumber || 1;
-
   const productList = useSelector((state) => state.productList);
   const { loading, error, products, page, pages } = productList;
 
@@ -67,30 +70,18 @@ const HomeScreen = ({ match }) => {
       {/* <Slider /> */}
       <div className="categoryItem__container mt-3">
         <Link to="/trending-now">
-          <CategoryItem
-            title="Trending Now"
-            image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_PC_1x._SY304_CB431800965_.jpg"
-          />
+          <CategoryItem title="Trending Now" image={trending} />
         </Link>
         <Link to="/holiday-deals">
-          <CategoryItem
-            title="Holiday Deals"
-            image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2020/HolidayDeals/Desktop/Fuji_Dash_HolidayDeals_1x._SY304_CB414581989_.jpg"
-          />
+          <CategoryItem title="Holiday Deals" image={holiday} />
         </Link>
 
         <Link to="/offers">
-          <CategoryItem
-            title="Upto 50% off"
-            image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
-          />
+          <CategoryItem title="Upto 50% off" image={offer} />
         </Link>
 
         <Link to="/krent-basics">
-          <CategoryItem
-            title="Krent Basics"
-            image="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg"
-          />
+          <CategoryItem title="Krent Basics" image={Basics} />
         </Link>
       </div>
       <Categories />
