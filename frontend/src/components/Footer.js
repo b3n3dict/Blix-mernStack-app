@@ -42,7 +42,7 @@ const FooterPage = () => {
         <MDBContainer fluid className="text-center text-md-left mt-4 ">
           <MDBRow className="mdRow">
             <MDBCol md="2">
-              <h1 style={{ padding: 0, color: "#2460A7FF" }}>Krent</h1>
+              <h1 style={{ padding: 0, color: "#2460A7FF" }}>Blix</h1>
               <h4>Connect. Bond.Grow</h4>
             </MDBCol>
             <MDBCol md="2">

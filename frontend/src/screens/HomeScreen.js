@@ -81,7 +81,7 @@ const HomeScreen = ({ match }) => {
         </Link>
 
         <Link to="/krent-basics">
-          <CategoryItem title="Krent Basics" image={Basics} />
+          <CategoryItem title="Blix Basics" image={Basics} />
         </Link>
       </div>
       <Categories />
