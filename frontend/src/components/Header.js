@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Badge } from "@material-ui/core";
-import logo from "../img/logo.png";
+import logo from "../img/blix1.1.png";
 import Search from "./Search";
 import { logout } from "../actions/userActions";
 import { USER_DETAILS_RESET } from "../constants/userConstants";
@@ -38,8 +38,8 @@ const Header = () => {
         <>
           <LinkContainer to="/">
             <Navbar>
-              <Navbar.Brand href="/" className="neuHeader neu__button">
-                <img src={logo} width="150px" alt="" />
+              <Navbar.Brand href="/" className="neuHeader ">
+                <img src={logo} width="150px" height="55px" alt="" />
               </Navbar.Brand>
             </Navbar>
           </LinkContainer>
