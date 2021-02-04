@@ -4,7 +4,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button, Row, Col } from "react-bootstrap";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
-import Paginate from '../components/Paginate'
+import Paginate from "../components/Paginate";
 import {
   deleteProduct,
   listProducts,
@@ -13,10 +13,10 @@ import {
 import { PRODUCT_CREATE_RESET } from "../constants/productConstants";
 const ProductListScreen = ({ history, match }) => {
   const dispatch = useDispatch();
-  
-  const pageNumber = match.params.pageNumber || 1
+
+  const pageNumber = match.params.pageNumber || 1;
   const productList = useSelector((state) => state.productList);
-  const { loading, error, products,page,pages } = productList;
+  const { loading, error, products, page, pages } = productList;
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
@@ -47,7 +47,7 @@ const ProductListScreen = ({ history, match }) => {
     if (successCreate) {
       history.push(`/admin/product/${createdProduct._id}/edit`);
     } else {
-      dispatch(listProducts('',pageNumber));
+      dispatch(listProducts("", pageNumber));
     }
   }, [
     dispatch,
@@ -56,7 +56,7 @@ const ProductListScreen = ({ history, match }) => {
     deleteSuccess,
     successCreate,
     createdProduct,
-    pageNumber
+    pageNumber,
   ]);
 
   const deleteHandler = (id) => {
@@ -124,7 +124,9 @@ const ProductListScreen = ({ history, match }) => {
           </tbody>
         </Table>
       )}
-      <Paginate pages={pages} page={page} isAdmin={true}/>
+      <div className="pagination__container container px-5 mx-5">
+        <Paginate pages={pages} page={page} isAdmin={true} />
+      </div>
     </>
   );
 };

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Badge } from "@material-ui/core";
-import logo from "../img/logo.png";
+import logo from "../img/blix5.png";
 import Search from "./Search";
 import { logout } from "../actions/userActions";
 import { USER_DETAILS_RESET } from "../constants/userConstants";
@@ -30,7 +30,8 @@ const Header = () => {
   return (
     <header>
       <Navbar
-        className="fixed-top pr-5"
+        className="fixed-top"
+        pr-5
         style={{ backgroundColor: "#ebecf0" }}
         expand="lg"
         collapseOnSelect
@@ -38,15 +39,15 @@ const Header = () => {
         <>
           <LinkContainer to="/">
             <Navbar>
-              <Navbar.Brand href="/" className="neuHeader neu__button">
+              <Navbar.Brand href="/" className="neuHeader">
                 <img src={logo} width="150px" alt="" />
               </Navbar.Brand>
             </Navbar>
           </LinkContainer>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-5" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto ml-3">
-              <div className="row mr-4 ml-1">
+            <Nav className="ml-auto">
+              <div className="row mr-3">
                 <Route render={({ history }) => <Search history={history} />} />
                 {/* <div className="CardInner">
       

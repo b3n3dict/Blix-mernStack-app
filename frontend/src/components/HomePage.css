@@ -51,6 +51,18 @@
   letter-spacing: 1px;
   text-decoration: none;
 }
+.content-button {
+  border-radius: 20px;
+  background-color: #3075c4;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-weight: 100;
+  margin-top: 10px;
+}
+.content-button:hover {
+  background-color: #457ebe;
+  color: rgb(255, 255, 255);
+}
 .content .imgBox {
   width: 600px;
   height: 600px;

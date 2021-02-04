@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./HomePage.css";
+<<<<<<< HEAD
 import {LinkContainer} from 'react-router-bootstrap'
+=======
+import { LinkContainer } from "react-router-bootstrap";
+>>>>>>> jeswin
 import Camera from "../img/cam-trans.png";
 import Mac from "../img/mac-trans.png";
 import Controller from "../img/controller-trans.png";
@@ -61,7 +65,9 @@ const HomePage = () => {
             merchandising and so forth and so on. And everybody was getting into
             catalogs and e-commerce and - you name it. It was just intense.
           </p>
-          <Link to="#">Learn More </Link>
+          <Link to="#" className="content-button">
+            Learn More{" "}
+          </Link>
         </div>
         <div className="imgBox">
           <img src={image} className="starbucks" id="starbucks" alt="" />
@@ -69,6 +75,7 @@ const HomePage = () => {
       </div>
       <ul className="thumb" id="thumbImg">
         <li>
+<<<<<<< HEAD
         <LinkContainer to='/product/600bedc2baba0b4804ca72df'>
           <img
             src={Camera}
@@ -116,6 +123,53 @@ const HomePage = () => {
             }}
             alt=""
           />
+=======
+          <LinkContainer to="/product/600bedc2baba0b4804ca72df">
+            <img
+              src={Camera}
+              onMouseOver={() => {
+                imgSlider(Camera);
+                circleColorChange("#2176bd");
+              }}
+              alt=""
+            />
+          </LinkContainer>
+        </li>
+        <li>
+          <LinkContainer to="/product/600be827cabbed2f002d5225">
+            <img
+              src={Mac}
+              onMouseOver={() => {
+                imgSlider(Mac);
+                circleColorChange("#23689b");
+              }}
+              alt=""
+            />
+          </LinkContainer>
+        </li>
+        <li className="mob__res">
+          <LinkContainer to="/product/600c0aa0a8e8774f6c6652e1">
+            <img
+              src={Controller}
+              onMouseOver={() => {
+                imgSlider(Controller);
+                circleColorChange("#b3b3cc");
+              }}
+              alt=""
+            />
+          </LinkContainer>
+        </li>
+        <li id="mob__res4">
+          <LinkContainer to="/product/5fd3452e49721054ac0e5ca6">
+            <img
+              src={Iphone11}
+              onMouseOver={() => {
+                imgSlider(Iphone11);
+                circleColorChange("#666699");
+              }}
+              alt=""
+            />
+>>>>>>> jeswin
           </LinkContainer>
         </li>{" "}
         <li id="mob__res1">
