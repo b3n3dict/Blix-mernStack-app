@@ -108,7 +108,7 @@ export const payOrder = (orderId, paymentResult) => async (
       `/api/orders/${orderId}/pay`,
       paymentResult,
       config
-    );
+    );                             
 
     dispatch({
       type: ORDER_PAY_SUCCESS,
