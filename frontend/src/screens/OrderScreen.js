@@ -65,16 +65,9 @@ const OrderScreen = ({ match, history }) => {
   const deliverHandler = () => {
     dispatch(deliverOrder(order));
   };
-<<<<<<< HEAD
-  const codHandler = () =>{
-
-    history.push('/profile')
-  }
-=======
   const codHandler = () => {
     history.push("/profile");
   };
->>>>>>> jeswin
   return loading ? (
     <Loader />
   ) : error ? (
@@ -189,33 +182,6 @@ const OrderScreen = ({ match, history }) => {
                   <Col>&#8377;{order.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
-<<<<<<< HEAD
-              {order.paymentMethod ==='COD' && userInfo &&
-               !userInfo.isAdmin ? 
-              <Button
-                      type="button"
-                      className="btn btn-block"
-                      onClick={codHandler}
-                    >
-                      Place Order
-                    </Button> : 
-                    !order.isPaid && (
-                <ListGroup.Item>
-                  {loadingPay && <Loader />}
-                  {!sdkReady ? (
-                    <Loader />
-                  ) : (
-                    <PayPalButton
-                      amount={order.totalPrice}
-                      onSuccess={successPaymentHandler}
-                      currency="INR"
-                    />
-                  )}
-                </ListGroup.Item>
-              )} 
-               
-            
-=======
               {order.paymentMethod === "COD" &&
               userInfo &&
               !userInfo.isAdmin ? (
@@ -243,7 +209,6 @@ const OrderScreen = ({ match, history }) => {
                 )
               )}
 
->>>>>>> jeswin
               {deliverLoading && <loading />}
               {userInfo &&
                 userInfo.isAdmin &&
