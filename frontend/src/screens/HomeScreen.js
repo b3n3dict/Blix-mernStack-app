@@ -115,7 +115,7 @@ const HomeScreen = ({ match }) => {
       </div> */}
 
       <div className="px-5">
-        <div className=" display__item row" data-aos="fade-right">
+        <div className=" display__item row">
           <div className="display__item-desc col-md-6">
             <LinkContainer
               to="/product/600c0aa0a8e8774f6c6652e1"
@@ -143,7 +143,7 @@ const HomeScreen = ({ match }) => {
           </div>
         </div>
         <div className="px-5">
-          <div className="display__item row ml-2" data-aos="zoom-in-left">
+          <div className="display__item row ml-2">
             <div className="col-md-6 display__item-img ">
               <LinkContainer
                 to="/product/600bedc2baba0b4804ca72df"
@@ -172,7 +172,7 @@ const HomeScreen = ({ match }) => {
             </div>
           </div>
         </div>
-        <div className="display__item row" data-aos="fade-right">
+        <div className="display__item row">
           <div className="display__item-desc col-md-6">
             <LinkContainer
               to="/product/600be827cabbed2f002d5225"
@@ -216,7 +216,7 @@ const HomeScreen = ({ match }) => {
               </Col>
             ))}
           </Row>
-          <div className="pagination__container container px-5 mx-5">
+          <div className="pagination__container container px-5 mx-5 mb-2">
             <Paginate
               pages={pages}
               page={page}

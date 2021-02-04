@@ -24,7 +24,7 @@ const FooterPage = () => {
   }, 8000);
   return (
     <>
-      <div className="footer__top-container ">
+      <div className="footer__top-container mt-5 ">
         <div className="footer__top ">
           <img src={logo} alt="" />
         </div>
@@ -95,9 +95,9 @@ const FooterPage = () => {
             </MDBCol>
             <MDBCol md="4" className="lastDiv">
               <div className="input-group">
-                <h5 style={{ textAlign: "center", paddingLeft: "60px" }}>
+                {/* <h5 style={{ textAlign: "center", paddingLeft: "60px" }}>
                   Stay In Touch
-                </h5>
+                </h5> */}
                 <form
                   style={{ display: "flex", paddingTop: "27px" }}
                   onSubmit={emailSubmit}
@@ -153,7 +153,7 @@ const FooterPage = () => {
             }}
           />
           <MDBContainer fluid style={{ marginTop: "10px" }}>
-            &copy; 2020-{new Date().getFullYear()} Copyright: Krent
+            &copy; 2020-{new Date().getFullYear()} Copyright: Blix
           </MDBContainer>
         </div>
       </MDBFooter>

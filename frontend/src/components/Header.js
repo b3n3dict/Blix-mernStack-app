@@ -44,10 +44,10 @@ const Header = () => {
               </Navbar.Brand>
             </Navbar>
           </LinkContainer>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-5" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-              <div className="row">
+              <div className="row mr-3">
                 <Route render={({ history }) => <Search history={history} />} />
                 {/* <div className="CardInner">
       

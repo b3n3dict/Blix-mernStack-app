@@ -9,12 +9,13 @@
   margin-top: 60px !important;
   clip-path: polygon(0 27%, 100% 0%, 100% 100%, 0% 100%);
   position: relative;
+  font-weight: 100;
 }
 .inFt,
 .ftb {
   border: 0;
   outline: 0;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 150px !important;
   padding: 16px;
   background-color: #272727;
@@ -45,11 +46,10 @@ label {
 
 .ftb {
   color: #61677c;
-  font-weight: bold;
   box-shadow: -5px -5px 20px #212121, 5px 5px 20px #141414;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .ftb:hover {
