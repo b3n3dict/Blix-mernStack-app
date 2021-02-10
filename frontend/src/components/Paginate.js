@@ -20,7 +20,7 @@ const Paginate = ({ pages, page, isAdmin = false, keyword = "" }) => {
             <Pagination.Item active={x + 1 === page}>{x + 1}</Pagination.Item>
           </LinkContainer>
         ))}
-        <Pagination.Ellipsis />
+        {/* <Pagination.Ellipsis /> */}
       </Pagination>
     )
   );
