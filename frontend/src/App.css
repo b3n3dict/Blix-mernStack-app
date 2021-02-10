@@ -261,6 +261,17 @@ label {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+@media only screen and (max-width: 600px) {
+  .pagination__container {
+    display: flex;
+    overflow-x: scroll;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 0;
+    padding: 0 !important;
+    max-width: fit-content;
+  }
+}
 .product__card {
   border-radius: 20px !important;
   padding: 10px;
