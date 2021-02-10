@@ -128,7 +128,9 @@
   height: 100vh;
   /* background-color: #017143; */
   clip-path: circle(600px at right 800px);
+ 
 }
+
 @media (max-width: 991px) {
   .content {
     flex-direction: column;
