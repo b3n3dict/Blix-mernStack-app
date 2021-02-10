@@ -224,7 +224,6 @@ label {
   /* justify-content: center;
   align-items: center; */
   margin: 0 16px/2;
-
   border: 0;
   border-top-right-radius: 11px;
   border-top-left-radius: 11px;
@@ -261,6 +260,17 @@ label {
   align-items: center;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+@media only screen and (max-width: 600px) {
+  .pagination__container {
+    display: flex;
+    overflow-x: scroll;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 0;
+    padding: 0 !important;
+    max-width: fit-content;
+  }
 }
 .product__card {
   border-radius: 20px !important;
