@@ -1,12 +1,13 @@
+
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "blix",
+  "short_name": "blix",
+  "theme_color": "#5372fe",
+  "background_color": "#3b3b3b",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
   "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
     {
       "src": "logo192.png",
       "type": "image/png",
@@ -17,9 +18,5 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }
