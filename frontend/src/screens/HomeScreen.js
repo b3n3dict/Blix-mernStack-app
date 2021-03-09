@@ -142,8 +142,8 @@ const HomeScreen = ({ match }) => {
             </LinkContainer>
           </div>
         </div>
-        <div className="px-5" data-aos="fade-right">
-          <div className="display__item row ml-2">
+        <div >
+          <div className="display__item row ml-2" data-aos="zoom-in">
             <div className="col-md-6 display__item-img ">
               <LinkContainer
                 to="/product/600bedc2baba0b4804ca72df"
