@@ -25,7 +25,7 @@ const KrentBasics = ({match}) => {
         Go Back
       </Link>
 
-      <h1 className="mx-5">KrentBasics</h1>
+      <h1 className="mx-5">Blix Basics</h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -33,7 +33,7 @@ const KrentBasics = ({match}) => {
       ) : (
         <Row className="mx-5">
           {products
-            .filter((product) => product.category === "Krent-Basics")
+            .filter((product) => product.category === "BlixBasics")
             .map((item) => (
               <Col key={item._id} sm={12} md={6} lg={4} xl={3}>
                 <Product product={item} />
