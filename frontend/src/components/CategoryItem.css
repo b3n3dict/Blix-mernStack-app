@@ -29,7 +29,6 @@
 .category__image img {
   max-width: 200px;
   height: auto;
-  min-width: 240px;
   max-height: 200px;
   overflow: hidden;
   transition: transform 850ms;
